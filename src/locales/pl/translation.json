@@ -36,8 +36,17 @@
   },
   "about": {
     "title": "Shellty",
-    "kicker": "Infrastruktura • Automatyzacja • Development",
+    "kicker": "Infrastruktura • Wsparcie • Development",
     "p1": "Cześć! Tu Tomasz Skorupski. Przez lata dbałem o to, by systemy informatyczne działały bezawaryjnie – administrując serwerami (Windows/Linux), sieciami i bazami danych. Zrozumiałem jednak, że chcę nie tylko naprawiać, utrzymywać i zmieniać, ale przede wszystkim tworzyć. Dziś wykorzystuję to solidne, techniczne zaplecze do budowania i usprawniania rozwiązań.",
+    "videoInvite": "Jeśli wolisz słuchać, niż czytać – zapraszam do obejrzenia mojej krótkiej prezentacji wideo",
+    "videoInviteDirDesktop": " po prawej stronie.",
+    "videoInviteDirMobile": " poniżej.",
+    "video": {
+      "vimeoId": "1166225581",
+      "title": "Prezentacja wideo",
+      "playAria": "Odtwórz prezentację wideo",
+      "iframeTitle": "Prezentacja wideo – Tomasz Skorupski"
+    },
     "approachTitle": "Moje Podejście: Praktyczna Wszechstronność",
     "approachIntro": "Nie jestem tylko programistą, ani tylko administratorem. Jestem wszechstronnym specjalistą, który widzi szerszy obraz. Moja hybrydowa wiedza gwarantuje, że projektowane przeze mnie rozwiązania są nie tylko innowacyjne, ale i infrastrukturalnie stabilne.",
     "points": {

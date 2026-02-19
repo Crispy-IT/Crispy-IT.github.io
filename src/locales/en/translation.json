@@ -36,8 +36,16 @@
   },
   "about": {
     "title": "Shellty",
-    "kicker": "Infrastructure • Automation • Development",
-    "p1": "Hi! My name is <strong>Tomasz Skorupski</strong>. For years I ensured systems ran reliably — administering servers (Windows/Linux), networks and databases. I realized I don’t want to just fix, maintain and change, but above all <strong>create</strong>. Today I use that solid technical foundation to build and improve solutions.",
+    "kicker": "Infrastructure • Support • Development",
+    "videoInvite": "If you prefer listening over reading – feel free to watch my short video introduction",
+    "videoInviteDirDesktop": " on the right.",
+    "videoInviteDirMobile": " below.",
+    "video": {
+      "vimeoId": "1166222682",
+      "title": "Video presentation",
+      "playAria": "Play video introduction",
+      "iframeTitle": "Video introduction – Tomasz Skorupski"
+    },
     "approachTitle": "My Approach: Practical Versatility",
     "approachIntro": "I’m not just a developer, nor just an administrator. I am a versatile specialist who sees the bigger picture. My hybrid expertise ensures that the solutions I design are not only innovative but also infrastructurally robust.",
     "points": {
