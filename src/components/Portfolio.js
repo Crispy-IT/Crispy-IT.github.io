@@ -1,6 +1,6 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo, useState, useEffect, useCallback } from 'react';
 import './Portfolio.css';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaKey, FaCopy, FaCheck } from 'react-icons/fa';
 import { useTranslation, Trans } from 'react-i18next';
 
 import mobisalonThumbnail from './assets/mobisalon.jpg';
@@ -13,10 +13,71 @@ import postlioThumbnailAng from './assets/postlio_ang.jpg';
 import cookbookThumbnail from './assets/mobile_cook.jpg';
 import animalsThumbnail from './assets/one_page_animals.jpg';
 
+const CopyButton = ({ text, label }) => {
+    const [copied, setCopied] = useState(false);
+
+    const handleCopy = useCallback(async () => {
+        try {
+            await navigator.clipboard.writeText(text);
+        } catch {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.cssText = 'position:fixed;opacity:0';
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+        }
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    }, [text]);
+
+    return (
+        <button
+            className={`copy-btn${copied ? ' copied' : ''}`}
+            onClick={handleCopy}
+            aria-label={label}
+            title={label}
+            type="button"
+        >
+            {copied ? <FaCheck /> : <FaCopy />}
+        </button>
+    );
+};
+
+const TestAccountBox = ({ account, t }) => {
+    if (!account?.fields?.length) return null;
+
+    return (
+        <div className="test-account" role="region" aria-label={t('portfolio.testAccount.title')}>
+            <div className="test-account-header">
+                <FaKey className="test-account-icon" />
+                <span>{t('portfolio.testAccount.title')}</span>
+            </div>
+            <p className="test-account-note">
+                {account.noteKey ? t(account.noteKey) : t('portfolio.testAccount.note')}
+            </p>
+            <div className="test-account-credentials">
+                {account.fields.map(({ labelKey, value }) => (
+                    <div className="credential-row" key={labelKey}>
+                        <span className="credential-label">
+                            {t(`portfolio.testAccount.fields.${labelKey}`)}
+                        </span>
+                        <code className="credential-value">{value}</code>
+                        <CopyButton
+                            text={value}
+                            label={t(`portfolio.testAccount.copy.${labelKey}`)}
+                        />
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
 const Portfolio = () => {
     const { t, i18n } = useTranslation();
     const currentLanguage = i18n.language;
-
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -37,6 +98,12 @@ const Portfolio = () => {
             role: t('portfolio.projects.postlio.role', { defaultValue: 'Developer' }),
             year: '2026',
             caseStudyLink: t('portfolio.projects.postlio.case', { defaultValue: '' }) || null,
+            testAccount: {
+                fields: [
+                    { labelKey: 'login', value: 'test@test.pl' },
+                    { labelKey: 'password', value: 'Testowe123!' },
+                ],
+            },
         },
         {
             id: "smartQuoteAI",
@@ -50,6 +117,12 @@ const Portfolio = () => {
             role: t('portfolio.projects.smartQuoteAI.role', { defaultValue: 'WIP' }),
             year: '2026',
             caseStudyLink: t('portfolio.projects.smartQuoteAI.case', { defaultValue: '' }) || null,
+            testAccount: {
+                fields: [
+                    { labelKey: 'login', value: 'testowy@test.pl' },
+                    { labelKey: 'password', value: 'Testowe123!' },
+                ],
+            },
         },
         {
             id: "ksefMaster",
@@ -63,6 +136,13 @@ const Portfolio = () => {
             role: t('portfolio.projects.ksefMaster.role', { defaultValue: 'WIP' }),
             year: '2026',
             caseStudyLink: t('portfolio.projects.ksefMaster.case', { defaultValue: '' }) || null,
+            testAccount: {
+                noteKey: 'portfolio.testAccount.noteKsef',
+                fields: [
+                    { labelKey: 'nip', value: '6181020505' },
+                    { labelKey: 'token', value: '20260128-EC-2BE47EC000-2F20D717BD-7C|nip-6181020505|3692b1e486304d4d9c02a486434b8a143f7547aea0d847e7bf00af38dcae3b8b\n' },
+                ],
+            },
         },
         {
             id: "mobiSalon",
@@ -81,7 +161,7 @@ const Portfolio = () => {
             id: "pwaCookbook",
             image: cookbookThumbnail,
             demoLink: 'https://mobilnaksiazkakucharska.netlify.app',
-            githubLink: 'https://github.com/shellupski/Mobilna-ksiazka-kucharska',
+            githubLink: 'https://github.com/shellty-it/Mobilna-ksiazka-kucharska',
             title: t('portfolio.projects.pwaCookbook.title'),
             subtitle: t('portfolio.projects.pwaCookbook.subtitle'),
             description: t('portfolio.projects.pwaCookbook.description'),
@@ -89,12 +169,18 @@ const Portfolio = () => {
             role: t('portfolio.projects.pwaCookbook.role', { defaultValue: 'Developer' }),
             year: '2021',
             caseStudyLink: t('portfolio.projects.pwaCookbook.case', { defaultValue: '' }) || null,
+            testAccount: {
+                fields: [
+                    { labelKey: 'login', value: 'test@testowy.pl' },
+                    { labelKey: 'password', value: 'Testowe123!' },
+                ],
+            },
         },
         {
             id: "animalsOnePage",
             image: animalsThumbnail,
             demoLink: 'https://zwierzeta.netlify.app/#fourty-page',
-            githubLink: 'https://github.com/shellupski/Strona-typu-One-Page',
+            githubLink: 'https://github.com/shellty-it/Strona-typu-One-Page',
             title: t('portfolio.projects.animalsOnePage.title'),
             subtitle: t('portfolio.projects.animalsOnePage.subtitle'),
             description: t('portfolio.projects.animalsOnePage.description'),
@@ -115,13 +201,11 @@ const Portfolio = () => {
                         <Trans
                             i18nKey="portfolio.subtitleHtml"
                             components={{
-                                link: <a href="https://github.com/shellupski" target="_blank" rel="noopener noreferrer" aria-label="GitHub" />
+                                link: <a href="https://github.com/shellty-it" target="_blank" rel="noopener noreferrer" aria-label="GitHub" />
                             }}
                         />
                     </p>
                 </header>
-
-                {/* Usunięto sekcję featured – wszystkie projekty są w jednej siatce */}
 
                 <section className="projects-grid" aria-live="polite">
                     {isLoading ? (
@@ -140,8 +224,7 @@ const Portfolio = () => {
                             ))}
                         </>
                     ) : (
-                        projects
-                        .map((project, index) => (
+                        projects.map((project, index) => (
                             <article
                                 key={project.id}
                                 className={`project-card animate-slide-up delay-${index + 1}`}
@@ -201,22 +284,25 @@ const Portfolio = () => {
                                         ))}
                                     </div>
 
-                                    <div className="project-links">
-                                        {project.demoLink && (
-                                            <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link">
-                                                <FaExternalLinkAlt /> {t('portfolio.actions.demo')}
-                                            </a>
-                                        )}
-                                        {project.githubLink && (
-                                            <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-link">
-                                                <FaGithub /> {t('portfolio.actions.code')}
-                                            </a>
-                                        )}
-                                        {project.caseStudyLink && (
-                                            <a href={project.caseStudyLink} target="_blank" rel="noopener noreferrer" className="project-link subtle">
-                                                {t('portfolio.actions.case', { defaultValue: 'Case study' })}
-                                            </a>
-                                        )}
+                                    <div className="project-bottom">
+                                        <TestAccountBox account={project.testAccount} t={t} />
+                                        <div className="project-links">
+                                            {project.demoLink && (
+                                                <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link">
+                                                    <FaExternalLinkAlt /> {t('portfolio.actions.demo')}
+                                                </a>
+                                            )}
+                                            {project.githubLink && (
+                                                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-link">
+                                                    <FaGithub /> {t('portfolio.actions.code')}
+                                                </a>
+                                            )}
+                                            {project.caseStudyLink && (
+                                                <a href={project.caseStudyLink} target="_blank" rel="noopener noreferrer" className="project-link subtle">
+                                                    {t('portfolio.actions.case', { defaultValue: 'Case study' })}
+                                                </a>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
                             </article>
