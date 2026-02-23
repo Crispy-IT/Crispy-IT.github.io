@@ -273,63 +273,63 @@
   },
   "portfolio": {
     "title": "Portfolio",
-    "subtitleHtml": "Moje publiczne portfolio jest obecnie skromne, ponieważ większość dotychczasowych realizacji powstawała na rzecz pracodawców i pozostaje objęta ograniczeniami w udostępnianiu. Równolegle tworzę serię autorskich projektów demonstracyjnych - wkrótce pojawią się tutaj nowe pozycje. Wszystkie, w tym także mniejsze i eksperymentalne prace, publikuję na <link>GitHubie</link>.",
+    "subtitleHtml": "My public portfolio is currently modest, as most of my past projects were developed for employers and remain subject to sharing restrictions. At the same time, I am creating a series of my own demo projects - new items will appear here soon. Please note that I use free cloud backend servers, which may result in a so-called cold start.",
     "actions": {
-      "demo": "Zobacz",
-      "code": "Kod"
+      "demo": "View",
+      "code": "Code"
     },
     "testAccount": {
-      "title": "Konto testowe",
-      "note": "Zaloguj się, aby zobaczyć funkcje aplikacji",
-      "noteKsef": "Użyj poniższych danych, aby przetestować integrację z KSeF",
+      "title": "Test account",
+      "note": "Log in to see the application features",
+      "noteKsef": "Use the following data to test the integration with KSeF",
       "fields": {
         "login": "Login",
-        "password": "Hasło",
+        "password": "Password",
         "nip": "NIP",
         "token": "Token"
       },
       "copy": {
-        "login": "Kopiuj login",
-        "password": "Kopiuj hasło",
-        "nip": "Kopiuj NIP",
-        "token": "Kopiuj token"
+        "login": "Copy login",
+        "password": "Copy password",
+        "nip": "Copy NIP",
+        "token": "Copy token"
       }
     },
     "projects": {
       "postlio": {
-        "title": "Inteligentny Asystent Social Media",
-        "subtitle": "Twórz, planuj i publikuj posty na FB, IG i LinkedIn z pomocą AI",
-        "description": "Postlio to nowoczesna aplikacja PWA wspomagająca zarządzanie mediami społecznościowymi. Pozwala na tworzenie i planowanie postów oraz grafik przy wsparciu, w zależności od potrzeb różnego typu Agentów AI. System umożliwia pełną automatyzację publikacji zgodnie z harmonogramem dla kont firmowych (Facebook Pages, Instagram Business oraz LinkedIn). W przypadku profili osobistych, ze względu na regulaminy platform, aplikacja służy do profesjonalnego przygotowania treści do samodzielnego udostępnienia.\n\nProjekt jest obecnie wdrożony w celach testowych. Skupiam się na ulepszaniu UX oraz finalizacji procesu zatwierdzania aplikacji przez Meta. Po uzyskaniu pełnego dostępu do API, użytkownicy będą mogli udostępniać swoje materiały bezpośrednio z poziomu aplikacji.",
+        "title": "Smart Social Media Assistant",
+        "subtitle": "Create, schedule, and publish posts on FB, IG, and LinkedIn with AI",
+        "description": "Postlio is a modern PWA application supporting social media management. It allows for creating and scheduling posts and graphics with the support of various types of AI Agents. The system enables full automation of publication according to a schedule for business accounts (Facebook Pages, Instagram Business, and LinkedIn). For personal profiles, due to platform regulations, the application is used for professional content preparation for manual sharing.\n\nThe project is currently deployed for testing purposes. I am focused on improving UX and finalizing the application approval process by Meta. After obtaining full API access, users will be able to share their materials directly from the application.",
         "tech": ["Next.js", "TypeScript", "TailwindCSS", "PWA", "PostgreSQL", "Python", "Netlify", "Render"]
       },
       "smartQuoteAI": {
-        "title": "SmartQuote AI – Inteligentny asystent sprzedaży",
-        "subtitle": "System CRM z asystentem AI do zarządzania sprzedażą",
-        "description": "Aplikacja webowa CRM wspierana przez Google Gemini, która automatyzuje tworzenie ofert, umów i analizę klientów. System posiada generator PDF z kalkulacją VAT, automatyczne follow-upy oraz dashboard statystyk. Obecnie w fazie testów i optymalizacji.\n\nWkrótce w SmartQuote AI:\n• Interaktywne oferty: Dynamiczne formaty webowe zamiast statycznych PDF-ów.\n• Integracja z KSeF Master: Automatyczne wystawianie faktur po akceptacji oferty.\n• Rozszerzone AI: Jeszcze głębsza analiza danych i wsparcie w negocjacjach.\n• Wersja mobilna: Aplikacja PWA do zarządzania sprzedażą z telefonu.",
+        "title": "SmartQuote AI – Intelligent Sales Assistant",
+        "subtitle": "CRM system with an AI assistant for sales management",
+        "description": "A CRM web application supported by Google Gemini, which automates the creation of offers, contracts, and customer analysis. The system features a PDF generator with VAT calculation, automatic follow-ups, and a statistics dashboard. Currently in the testing and optimization phase.\n\nComing soon to SmartQuote AI:\n• Interactive offers: Dynamic web formats instead of static PDFs.\n• Integration with KSeF Master: Automatic invoicing after offer acceptance.\n• Expanded AI: Even deeper data analysis and negotiation support.\n• Mobile version: PWA application for managing sales from a phone.",
         "tech": ["Next.js", "TypeScript", "Express.js", "PostgreSQL", "Prisma", "Google Gemini AI", "Tailwind CSS", "REST API", "RWD"]
       },
       "ksefMaster": {
-        "title": "KSeF Master: Inteligentna ewolucja e-fakturowania",
-        "subtitle": "Integracja z KSeF: pobieranie i wystawianie faktur",
-        "description": "KSeF Master to zaawansowane narzędzie oparte na autorskim, stabilnym backendzie, który gwarantuje niezawodną komunikację z API KSeF. Obecnie dostępna w przeglądarce, platforma wkrótce zyska wersję Windows w trybie offline-first, zapewniając ciągłość pracy nawet bez dostępu do sieci.\n\nCo wyróżnia system:\n• Bezpieczeństwo przede wszystkim: Automatyczne wykrywanie podejrzanych faktur dzięki analizie zaawansowanych parametrów.\n• Pełna zgodność: Szybkie generowanie PDF-ów oraz obsługa bazy klientów zgodnie z oficjalnymi standardami.\n• Nadchodzące usprawnienia: Wprowadzenie logowania certyfikatem kwalifikowanym oraz dedykowanego modułu autoryzacji użytkowników w wersji webowej.",
+        "title": "KSeF Master: Intelligent E-invoicing Evolution",
+        "subtitle": "Integration with KSeF: downloading and issuing invoices",
+        "description": "KSeF Master is an advanced tool based on a proprietary, stable backend that guarantees reliable communication with the KSeF API. Currently available in the browser, the platform will soon gain a Windows version in offline-first mode, ensuring work continuity even without network access.\n\nWhat sets the system apart:\n• Security first: Automatic detection of suspicious invoices through analysis of advanced parameters.\n• Full compliance: Quick PDF generation and customer database support according to official standards.\n• Upcoming improvements: Introduction of qualified certificate login and a dedicated user authorization module in the web version.",
         "tech": ["React", "JavaScript", "REST API", "KSeF", "Netlify", "C# .NET", "Render", "Vite"]
       },
       "mobiSalon": {
-        "title": "Wizytówka groomerska z CMS",
-        "subtitle": "Witryna dla salonu groomerskiego",
-        "description": "To lekka i przejrzysta witryna typu one-page, zaprojektowana w technologii Next.js/React. Projekt łączy estetyczną prezentację salonu groomerskiego z funkcjonalnością ułatwiającą codzienną komunikację z klientami. Strona jest w pełni responsywna, co gwarantuje jej nienaganne działanie i czytelność na smartfonach oraz tabletach.\n\nSercem zarządzania stroną jest sekcja Aktualności, nad którą właściciel ma pełną kontrolę z poziomu panelu CMS (Decap CMS). Może on tam błyskawicznie publikować:\n• Bieżące komunikaty: ważne informacje o promocjach, zmianach w ofercie czy ogłoszenia dla klientów.\n• Kalendarz dostępności: interaktywne zestawienie, w którym administrator zaznacza dni pracy i wolne terminy, informując klientów o aktualnym grafiku salonu w czasie rzeczywistym.",
+        "title": "Grooming Business Card with CMS",
+        "subtitle": "Website for a grooming salon",
+        "description": "This is a light and clear one-page website designed with Next.js/React. The project combines an aesthetic presentation of a grooming salon with functionality that facilitates daily communication with customers. The site is fully responsive, which guarantees its impeccable operation and readability on smartphones and tablets.\n\nThe heart of the site management is the News section, over which the owner has full control from the CMS panel (Decap CMS). They can instantly publish there:\n• Current announcements: important information about promotions, changes in the offer, or announcements for customers.\n• Availability calendar: an interactive summary where the administrator marks working days and free slots, informing customers about the salon's current schedule in real time.",
         "tech": ["Next.js", "React", "Decap CMS", "SCSS", "RWD", "Netlify"]
       },
       "pwaCookbook": {
-        "title": "Mobilna Książka Kucharska (PWA)",
-        "subtitle": "Progresywna Aplikacja Webowa - projekt dyplomowy",
-        "description": "Opracowałem progresywną aplikację webową (PWA), która pomaga w planowaniu posiłków na podstawie składników dostępnych w kuchni. Integruje bazę przepisów, instrukcje przygotowania i czasy gotowania dodatków, a wbudowany timer z powiadomieniem dźwiękowym ułatwia kontrolę procesu. Aplikacja została zaprojektowana w podejściu mobile‑first i działa również w trybie offline, pozostając dostępna na każdym urządzeniu z przeglądarką. Dzięki temu realnie skraca czas spędzany na gotowaniu i ułatwia podejmowanie decyzji \"co ugotować\". Projekt zrealizowany w oparciu o React z naciskiem na wydajność i wygodę użytkownika. Powstał jako element pracy dyplomowej.",
+        "title": "Mobile Cookbook (PWA)",
+        "subtitle": "Progressive Web Application - diploma project",
+        "description": "I developed a progressive web application (PWA) that helps in planning meals based on ingredients available in the kitchen. It integrates a recipe database, preparation instructions, and side dish cooking times, and a built-in timer with sound notification facilitates process control. The application was designed with a mobile-first approach and also works offline, remaining available on any device with a browser. As a result, it realy shortens the time spent on cooking and facilitates decision-making \"what to cook\". Project implemented based on React with an emphasis on performance and user convenience. It was created as part of a diploma thesis.",
         "tech": ["React", "Firebase", "PWA"]
       },
       "animalsOnePage": {
-        "title": "Interesujące Zwierzęta - One Page",
-        "subtitle": "Prosta strona typu One Page (projekt studencki)",
-        "description": "Bardzo prosta, statyczna strona one page przygotowana w trakcie studiów jako realizacja jednego z zadań. Prezentuje wybrane, interesujące gatunki zwierząt w krótkich sekcjach z podstawowymi informacjami i ciekawostkami. Traktuję ją jako skromny materiał uzupełniający, pokazujący konsekwencję w dokumentowaniu postępów. Mam świadomość, że nie jest to projekt reprezentatywny dla obecnych umiejętności i wkrótce zastąpię go nowszymi, autorskimi realizacjami.",
+        "title": "Interesting Animals - One Page",
+        "subtitle": "Simple One Page website (student project)",
+        "description": "A very simple, static one-page website prepared during studies as part of one of the tasks. It presents selected, interesting animal species in short sections with basic information and trivia. I treat it as a modest supplementary material showing consistency in documenting progress. I am aware that this is not a project representative of my current skills and I will soon replace it with newer, original projects.",
         "tech": ["HTML", "CSS", "JavaScript"]
       }
     }
