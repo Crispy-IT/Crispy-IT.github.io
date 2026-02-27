@@ -305,19 +305,19 @@
       "smartQuoteAI": {
         "title": "SmartQuote AI – Intelligent Sales Assistant",
         "subtitle": "CRM system with an AI assistant for sales management",
-        "description": "A CRM web application supported by Google Gemini, which automates the creation of offers, contracts, and customer analysis. The system features a PDF generator with VAT calculation, automatic follow-ups, and a statistics dashboard. Currently in the testing and optimization phase.\n\nComing soon to SmartQuote AI:\n• Interactive offers: Dynamic web formats instead of static PDFs.\n• Integration with KSeF Master: Automatic invoicing after offer acceptance.\n• Expanded AI: Even deeper data analysis and negotiation support.\n• Mobile version: PWA application for managing sales from a phone.",
+        "description": "A CRM web application supported by Google Gemini, which automates the creation of offers, contracts, and customer analysis. The system features a PDF generator with VAT calculation, automatic follow-ups, and a statistics dashboard. Currently in the testing and optimization phase.\n\nComing soon to SmartQuote AI:\n• Interactive offers: dynamic web formats instead of static PDFs.\n• Integration with KSeF Master: automatic invoicing after offer acceptance.\n• Expanded AI: even deeper data analysis and negotiation support.\n• Mobile version: PWA application for managing sales from a phone.",
         "tech": ["Next.js", "TypeScript", "Express.js", "PostgreSQL", "Prisma", "Google Gemini AI", "Tailwind CSS", "REST API", "RWD"]
       },
       "ksefMaster": {
         "title": "KSeF Master: Intelligent E-invoicing Evolution",
         "subtitle": "Integration with KSeF: downloading and issuing invoices",
-        "description": "KSeF Master is an advanced tool based on a proprietary, stable backend that guarantees reliable communication with the KSeF API. Currently available in the browser, the platform will soon gain a Windows version in offline-first mode, ensuring work continuity even without network access.\n\nWhat sets the system apart:\n• Security first: Automatic detection of suspicious invoices through analysis of advanced parameters.\n• Full compliance: Quick PDF generation and customer database support according to official standards.\n• Upcoming improvements: Introduction of qualified certificate login and a dedicated user authorization module in the web version.",
+        "description": "KSeF Master is an advanced tool based on a proprietary, stable backend that guarantees reliable communication with the KSeF API. Currently available in the browser, the platform will soon gain a Windows version in offline-first mode, ensuring work continuity even without network access.\n\nWhat sets the system apart:\n• Security first: automatic detection of suspicious invoices through analysis of advanced parameters.\n• Full compliance: quick PDF generation and customer database support according to official standards.\n• Upcoming improvements: introduction of qualified certificate login and a dedicated user authorization module in the web version.",
         "tech": ["React", "JavaScript", "REST API", "KSeF", "Netlify", "C# .NET", "Render", "Vite"]
       },
       "shelltyBlog": {
         "title": "Shellty Blog",
         "subtitle": "Engineering Academy Project • .NET 8",
-        "description": "A project developed as part of Nerds Family Engineering Academy, emphasizing software engineering, design patterns, and Clean Code principles. It is a modern CMS system based on MVC architecture, fully containerized (Docker) and integrated with a cloud PostgreSQL database (Neon).\n\nKey features:\n• Democratic permissions: Custom role assignment system through administrator voting.\n• MVC Architecture: Clean code structure following best practices.\n• Containerization: Full Docker support ensuring easy deployment and scalability.",
+        "description": "A project developed as part of Nerds Family Engineering Academy, emphasizing software engineering, design patterns, and Clean Code principles. It is a modern CMS system based on MVC architecture, fully containerized (Docker) and integrated with a cloud PostgreSQL database (Neon).\n\nKey features:\n• Democratic permissions: custom role assignment system through administrator voting.\n• MVC Architecture: clean code structure following best practices.\n• Containerization: full Docker support ensuring easy deployment and scalability.",
         "tech": ["C#", ".NET 8", "PostgreSQL", "Docker", "Identity", "Render"],
         "role": "Developer"
       },
