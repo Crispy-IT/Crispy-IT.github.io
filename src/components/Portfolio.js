@@ -12,6 +12,7 @@ import postlioThumbnail from './assets/postlio.jpg';
 import postlioThumbnailAng from './assets/postlio_ang.jpg';
 import cookbookThumbnail from './assets/mobile_cook.jpg';
 import animalsThumbnail from './assets/one_page_animals.jpg';
+import shelltyBlogThumbnail from './assets/shellty_blog.jpg';
 
 const CopyButton = ({ text, label }) => {
     const [copied, setCopied] = useState(false);
@@ -141,6 +142,25 @@ const Portfolio = () => {
                 fields: [
                     { labelKey: 'nip', value: '6181020505' },
                     { labelKey: 'token', value: '20260128-EC-2BE47EC000-2F20D717BD-7C|nip-6181020505|3692b1e486304d4d9c02a486434b8a143f7547aea0d847e7bf00af38dcae3b8b\n' },
+                ],
+            },
+        },
+        {
+            id: "shelltyBlog",
+            image: shelltyBlogThumbnail,
+            demoLink: 'https://shellty-blog.onrender.com',
+            githubLink: 'https://github.com/Shellty-IT/Shellty_Blog',
+            title: t('portfolio.projects.shelltyBlog.title'),
+            subtitle: t('portfolio.projects.shelltyBlog.subtitle'),
+            description: t('portfolio.projects.shelltyBlog.description'),
+            technologies: t('portfolio.projects.shelltyBlog.tech', { returnObjects: true }),
+            role: t('portfolio.projects.shelltyBlog.role', { defaultValue: 'Developer' }),
+            year: '2025',
+            caseStudyLink: t('portfolio.projects.shelltyBlog.case', { defaultValue: '' }) || null,
+            testAccount: {
+                fields: [
+                    { labelKey: 'login', value: 'admin@shellty.com' },
+                    { labelKey: 'password', value: 'Admin123!' },
                 ],
             },
         },

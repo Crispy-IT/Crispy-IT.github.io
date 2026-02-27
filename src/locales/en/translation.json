@@ -314,6 +314,13 @@
         "description": "KSeF Master is an advanced tool based on a proprietary, stable backend that guarantees reliable communication with the KSeF API. Currently available in the browser, the platform will soon gain a Windows version in offline-first mode, ensuring work continuity even without network access.\n\nWhat sets the system apart:\n• Security first: Automatic detection of suspicious invoices through analysis of advanced parameters.\n• Full compliance: Quick PDF generation and customer database support according to official standards.\n• Upcoming improvements: Introduction of qualified certificate login and a dedicated user authorization module in the web version.",
         "tech": ["React", "JavaScript", "REST API", "KSeF", "Netlify", "C# .NET", "Render", "Vite"]
       },
+      "shelltyBlog": {
+        "title": "Shellty Blog",
+        "subtitle": "Engineering Academy Project • .NET 8",
+        "description": "A project developed as part of Nerds Family Engineering Academy, emphasizing software engineering, design patterns, and Clean Code principles. It is a modern CMS system based on MVC architecture, fully containerized (Docker) and integrated with a cloud PostgreSQL database (Neon).\n\nKey features:\n• Democratic permissions: Custom role assignment system through administrator voting.\n• MVC Architecture: Clean code structure following best practices.\n• Containerization: Full Docker support ensuring easy deployment and scalability.",
+        "tech": ["C#", ".NET 8", "PostgreSQL", "Docker", "Identity", "Render"],
+        "role": "Developer"
+      },
       "mobiSalon": {
         "title": "Grooming Business Card with CMS",
         "subtitle": "Website for a grooming salon",

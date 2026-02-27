@@ -202,7 +202,7 @@
       "smartQuoteAI": {
         "title": "SmartQuote AI – Inteligentny asystent sprzedaży",
         "subtitle": "System CRM z asystentem AI do zarządzania sprzedażą",
-        "description": "Aplikacja webowa CRM wspierana przez Google Gemini, która automatyzuje tworzenie ofert, umów i analizę klientów. System posiada generator PDF z kalkulacją VAT, automatyczne follow-upy oraz dashboard statystyk. Obecnie w fazie testów i optymalizacji.\n\nWkrótce w SmartQuote AI:\n• Interaktywne oferty: Dynamiczne formaty webowe zamiast statycznych PDF-ów.\n• Integracja z KSeF Master: Automatyczne wystawianie faktur po akceptacji oferty.\n• Rozszerzone AI: Jeszcze głębsza analiza danych i wsparcie w negocjacjach.\n• Wersja mobilna: Aplikacja PWA do zarządzania sprzedażą z telefonu.",
+        "description": "Aplikacja webowa CRM wspierana przez Google Gemini, która automatyzuje tworzenie ofert, umów i analizę klientów. System posiada generator PDF z kalkulacją VAT, automatyczne follow-upy oraz dashboard statystyk. Obecnie w fazie testów i optymalizacji.\n\nWkrótce w SmartQuote AI:\n• Integracja z KSeF Master: Automatyczne wystawianie faktur po akceptacji oferty.\n• Wersja mobilna: Aplikacja PWA do zarządzania sprzedażą z telefonu.",
         "tech": ["Next.js", "TypeScript", "Express.js", "PostgreSQL", "Prisma", "Google Gemini AI", "Tailwind CSS", "REST API", "RWD"]
       },
       "ksefMaster": {
@@ -210,6 +210,13 @@
         "subtitle": "Integracja z KSeF: pobieranie i wystawianie faktur",
         "description": "KSeF Master to zaawansowane narzędzie oparte na autorskim, stabilnym backendzie, który gwarantuje niezawodną komunikację z API KSeF. Obecnie dostępna w przeglądarce, platforma wkrótce zyska wersję Windows w trybie offline-first, zapewniając ciągłość pracy nawet bez dostępu do sieci.\n\nCo wyróżnia system:\n• Bezpieczeństwo przede wszystkim: Automatyczne wykrywanie podejrzanych faktur dzięki analizie zaawansowanych parametrów.\n• Pełna zgodność: Szybkie generowanie PDF-ów oraz obsługa bazy klientów zgodnie z oficjalnymi standardami.\n• Nadchodzące usprawnienia: Wprowadzenie logowania certyfikatem kwalifikowanym oraz dedykowanego modułu autoryzacji użytkowników w wersji webowej.",
         "tech": ["React", "JavaScript", "REST API", "KSeF", "Netlify", "C# .NET", "Render", "Vite"]
+      },
+      "shelltyBlog": {
+        "title": "Shellty Blog",
+        "subtitle": "Engineering Academy Project • .NET 8",
+        "description": "Projekt zrealizowany w ramach Nerds Family Engineering Academy, kładący nacisk na inżynierię oprogramowania, wzorce projektowe i zasady Clean Code. Jest to prosty, ale nowoczesny system CMS oparty na architekturze MVC, w pełni skonteneryzowany (Docker) i zintegrowany z chmurową bazą PostgreSQL (Neon).\n\nCo wyróżnia system:\n• Demokratyczne uprawnienia: Autorski system nadawania ról poprzez głosowanie administratorów.\n• Architektura MVC: Przejrzysta struktura kodu zgodna z najlepszymi praktykami.\n• Konteneryzacja: Pełna obsługa Docker zapewniająca łatwe wdrożenie i skalowalność.",
+        "tech": ["C#", ".NET 8", "PostgreSQL", "Docker", "Identity", "Render"],
+        "role": "Developer"
       },
       "mobiSalon": {
         "title": "Wizytówka groomerska z CMS",
