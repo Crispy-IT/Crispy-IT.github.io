@@ -208,7 +208,7 @@
       "ksefMaster": {
         "title": "KSeF Master: Inteligentna ewolucja e-fakturowania",
         "subtitle": "Integracja z KSeF: pobieranie i wystawianie faktur",
-        "description": "KSeF Master to zaawansowane narzędzie oparte na autorskim, stabilnym backendzie, który gwarantuje niezawodną komunikację z API KSeF. Obecnie dostępna w przeglądarce, platforma wkrótce zyska wersję Windows w trybie offline-first, zapewniając ciągłość pracy nawet bez dostępu do sieci.\n\nCo wyróżnia system:\n• Bezpieczeństwo przede wszystkim: Automatyczne wykrywanie podejrzanych faktur dzięki analizie zaawansowanych parametrów.\n• Pełna zgodność: szybkie generowanie PDF-ów oraz obsługa bazy klientów zgodnie z oficjalnymi standardami.\n• Nadchodzące usprawnienia: wprowadzenie logowania certyfikatem kwalifikowanym oraz dedykowanego modułu autoryzacji użytkowników w wersji webowej.",
+        "description": "KSeF Master to zaawansowane narzędzie oparte na autorskim, stabilnym backendzie, który gwarantuje niezawodną komunikację z API KSeF. Obecnie dostępna w przeglądarce, platforma wkrótce zyska wersję Windows w trybie offline-first, zapewniając ciągłość pracy nawet bez dostępu do sieci.\n\nCo wyróżnia system:\n• Bezpieczeństwo przede wszystkim: automatyczne wykrywanie podejrzanych faktur dzięki analizie zaawansowanych parametrów.\n• Pełna zgodność: szybkie generowanie PDF-ów oraz obsługa bazy klientów zgodnie z oficjalnymi standardami.\n• Nadchodzące usprawnienia: wprowadzenie logowania certyfikatem kwalifikowanym oraz dedykowanego modułu autoryzacji użytkowników w wersji webowej.",
         "tech": ["React", "JavaScript", "REST API", "KSeF", "Netlify", "C# .NET", "Render", "Vite"]
       },
       "shelltyBlog": {
