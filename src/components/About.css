@@ -412,49 +412,6 @@
     display: none;
 }
 
-.about__tech {
-    margin-top: 3rem;
-    text-align: center;
-}
-
-.about__tech h3 {
-    font-size: 1.15rem;
-    color: #f1f5f9;
-    margin-bottom: 1.25rem;
-    font-weight: 600;
-}
-
-.about__tech-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-}
-
-.about__tech-grid .chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1rem;
-    border-radius: 999px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #f1f5f9;
-    font-size: 0.9rem;
-    transition: transform 0.15s ease, background-color 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.about__tech-grid .chip svg {
-    font-size: 1rem;
-    color: #0cc0ff;
-}
-
-.about__tech-grid .chip:hover {
-    transform: translateY(-2px);
-    background-color: rgba(12, 192, 255, 0.08);
-    border-color: rgba(12, 192, 255, 0.25);
-}
 
 .about__blob {
     display: none;

@@ -8,20 +8,8 @@ import {
     FaEnvelope,
     FaGithub,
     FaLinkedin,
-    FaWindows,
     FaGraduationCap,
 } from "react-icons/fa";
-import {
-    SiLinux,
-    SiDocker,
-    SiReact,
-    SiJavascript,
-    SiPostgresql,
-    SiMysql,
-    SiGit,
-    SiFirebase,
-    SiJira,
-} from "react-icons/si";
 import { useTranslation, Trans } from "react-i18next";
 
 const RING_SIZE = 88;
@@ -308,21 +296,6 @@ const About = () => {
                     </div>
                 </div>
 
-                <section className="about__tech animate-slide-up delay-2s">
-                    <h3>{t("about.techTitle")}</h3>
-                    <div className="about__tech-grid">
-                        <span className="chip"><FaWindows /> {t("about.techChips.win")}</span>
-                        <span className="chip"><SiLinux /> {t("about.techChips.linux")}</span>
-                        <span className="chip"><SiDocker /> {t("about.techChips.docker")}</span>
-                        <span className="chip"><SiGit /> {t("about.techChips.git")}</span>
-                        <span className="chip"><SiReact /> {t("about.techChips.react")}</span>
-                        <span className="chip"><SiJavascript /> {t("about.techChips.js")}</span>
-                        <span className="chip"><SiPostgresql /> {t("about.techChips.pg")}</span>
-                        <span className="chip"><SiMysql /> {t("about.techChips.mysql")}</span>
-                        <span className="chip"><SiFirebase /> {t("about.techChips.firebase")}</span>
-                        <span className="chip"><SiJira /> {t("about.techChips.jira")}</span>
-                    </div>
-                </section>
             </div>
         </section>
     );

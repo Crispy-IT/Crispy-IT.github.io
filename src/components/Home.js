@@ -18,33 +18,10 @@ const ROLES_EN = [
     "Database Administrator",
 ];
 
-const TECH_PL = [
-    "Windows Server • AD/GPO",
-    "Linux/Bash",
-    "TCP/IP • DNS • DHCP • VPN",
-    "Routery • Switche • Firewalle",
-    "MySQL (zaaw.) • PostgreSQL",
-    "Docker • Git • CI/CD",
-    "AWS/Azure/GCP (podstawy)",
-    "React • PHP • Jira",
-];
-
-const TECH_EN = [
-    "Windows Server • AD/GPO",
-    "Linux/Bash",
-    "TCP/IP • DNS • DHCP • VPN",
-    "Routers • Switches • Firewalls",
-    "MySQL (adv.) • PostgreSQL",
-    "Docker • Git • CI/CD",
-    "AWS/Azure/GCP (basics)",
-    "React • PHP • Jira",
-];
-
 export default function Home() {
     const { t, i18n } = useTranslation();
     const isEN = i18n.language?.startsWith("en");
     const ROLES = isEN ? ROLES_EN : ROLES_PL;
-    const TECH = isEN ? TECH_EN : TECH_PL;
 
     const [subIndex, setSubIndex] = useState(0);
     const [roleIndex, setRoleIndex] = useState(0);
@@ -190,14 +167,6 @@ export default function Home() {
                             <div className="stat__num">{t("home.stats.english.num")}</div>
                             <div className="stat__label">{t("home.stats.english.label")}</div>
                         </div>
-                    </div>
-
-                    <div className="tech-tags">
-                        {TECH.map((tech) => (
-                            <span className="tag" key={tech}>
-                              {tech}
-                            </span>
-                        ))}
                     </div>
 
                     <div className="quick-contact">

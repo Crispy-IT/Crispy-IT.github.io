@@ -86,19 +86,6 @@
       "cert5Name": "Python - Programming (Navoica, 2026)",
       "cert5Url": "https://raw.githubusercontent.com/Shellty-IT/Shellty-IT.github.io/main/public/certs/cert8.pdf"
     },
-    "techTitle": "Technologies I like and use",
-    "techChips": {
-      "win": "Windows Server / AD",
-      "linux": "Linux / Bash",
-      "docker": "Docker",
-      "git": "Git / GitLab / GitHub",
-      "react": "React",
-      "js": "JavaScript",
-      "pg": "PostgreSQL",
-      "mysql": "MySQL",
-      "firebase": "Firebase",
-      "jira": "Jira"
-    },
     "softSkillsTitle": "Soft skills",
     "soft": {
       "pass": "Passion",
@@ -233,7 +220,8 @@
       "network": "Networks",
       "db": "Databases",
       "devops": "DevOps & automation",
-      "frontend": "Web / Development",
+      "frontend": "Web technologies & frameworks",
+      "languages": "Programming languages",
       "tools": "Tools & practices",
       "soft": "Soft skills"
     },
@@ -250,16 +238,27 @@
       "postgres": { "name": "PostgreSQL", "level": "Basics" },
       "sql": { "name": "SQL (queries, optimization)", "level": "Intermediate" },
 
-      "git": { "name": "Git (GitHub/GitLab)", "level": "Advanced" },
       "cicd": { "name": "CI/CD (GitHub Actions)", "level": "Basics" },
       "docker": { "name": "Docker", "level": "Basics" },
       "cloud": { "name": "Cloud: AWS / Azure / GCP", "level": "Basics" },
 
       "react": { "name": "React", "level": "Intermediate" },
-      "js": { "name": "JavaScript", "level": "Intermediate" },
+      "nextjs": { "name": "Next.js", "level": "Basics" },
+      "angular": { "name": "Angular", "level": "Basics" },
       "htmlcss": { "name": "HTML5 / CSS3", "level": "Intermediate" },
-      "pwaFirebase": { "name": "PWA, Firebase", "level": "Intermediate" },
-      "php": { "name": "PHP (basics)", "level": "Basics" },
+      "tailwind": { "name": "Tailwind CSS", "level": "Basics" },
+      "bootstrap": { "name": "Bootstrap", "level": "Basics" },
+      "pwa": { "name": "PWA", "level": "Intermediate" },
+      "firebase": { "name": "Firebase", "level": "Intermediate" },
+      "nodejs": { "name": "Node.js", "level": "Basics" },
+      "restapi": { "name": "REST API", "level": "Intermediate" },
+      "dotnet": { "name": "ASP.NET / .NET", "level": "Basics" },
+
+      "js": { "name": "JavaScript", "level": "Intermediate" },
+      "ts": { "name": "TypeScript", "level": "Basics" },
+      "python": { "name": "Python", "level": "Basics" },
+      "csharp": { "name": "C#", "level": "Basics" },
+      "php": { "name": "PHP", "level": "Basics" },
 
       "jira": { "name": "Jira", "level": "Advanced" },
       "gitlab": { "name": "GitLab", "level": "Basics" },

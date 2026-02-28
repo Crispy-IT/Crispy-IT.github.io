@@ -27,9 +27,18 @@ import {
   SiJira,
   SiFirebase,
   SiGooglecloud,
-  SiPhp
+  SiPhp,
+  SiNextdotjs,
+  SiAngular,
+  SiTailwindcss,
+  SiBootstrap,
+  SiNodedotjs,
+  SiTypescript,
+  SiPython,
+  SiDotnet
 } from "react-icons/si";
-import { TbBrandAzure } from "react-icons/tb";
+import { TbBrandAzure, TbApi } from "react-icons/tb";
+import { FaMobileAlt } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 const Skills = () => {
@@ -74,7 +83,6 @@ const Skills = () => {
       key: "devops",
       label: t("skills.groups.devops"),
       items: [
-        { name: t("skills.items.git.name"), level: t("skills.items.git.level"), Icon: SiGit },
         { name: t("skills.items.cicd.name"), level: t("skills.items.cicd.level"), Icon: SiGithubactions },
         { name: t("skills.items.docker.name"), level: t("skills.items.docker.level"), Icon: SiDocker },
         {
@@ -90,9 +98,26 @@ const Skills = () => {
       label: t("skills.groups.frontend"),
       items: [
         { name: t("skills.items.react.name"), level: t("skills.items.react.level"), Icon: SiReact },
-        { name: t("skills.items.js.name"), level: t("skills.items.js.level"), Icon: SiJavascript },
+        { name: t("skills.items.nextjs.name"), level: t("skills.items.nextjs.level"), Icon: SiNextdotjs },
+        { name: t("skills.items.angular.name"), level: t("skills.items.angular.level"), Icon: SiAngular },
         { name: t("skills.items.htmlcss.name"), level: t("skills.items.htmlcss.level"), Icon: FaHtml5, twinIcon: FaCss3 },
-        { name: t("skills.items.pwaFirebase.name"), level: t("skills.items.pwaFirebase.level"), Icon: SiFirebase },
+        { name: t("skills.items.tailwind.name"), level: t("skills.items.tailwind.level"), Icon: SiTailwindcss },
+        { name: t("skills.items.bootstrap.name"), level: t("skills.items.bootstrap.level"), Icon: SiBootstrap },
+        { name: t("skills.items.pwa.name"), level: t("skills.items.pwa.level"), Icon: FaMobileAlt },
+        { name: t("skills.items.firebase.name"), level: t("skills.items.firebase.level"), Icon: SiFirebase },
+        { name: t("skills.items.nodejs.name"), level: t("skills.items.nodejs.level"), Icon: SiNodedotjs },
+        { name: t("skills.items.restapi.name"), level: t("skills.items.restapi.level"), Icon: TbApi },
+        { name: t("skills.items.dotnet.name"), level: t("skills.items.dotnet.level"), Icon: SiDotnet }
+      ]
+    },
+    {
+      key: "languages",
+      label: t("skills.groups.languages"),
+      items: [
+        { name: t("skills.items.js.name"), level: t("skills.items.js.level"), Icon: SiJavascript },
+        { name: t("skills.items.ts.name"), level: t("skills.items.ts.level"), Icon: SiTypescript },
+        { name: t("skills.items.python.name"), level: t("skills.items.python.level"), Icon: SiPython },
+        { name: t("skills.items.csharp.name"), level: t("skills.items.csharp.level"), Icon: SiDotnet },
         { name: t("skills.items.php.name"), level: t("skills.items.php.level"), Icon: SiPhp }
       ]
     },
