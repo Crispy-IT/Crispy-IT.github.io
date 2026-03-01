@@ -155,7 +155,7 @@ const Portfolio = () => {
             description: t('portfolio.projects.shelltyBlog.description'),
             technologies: t('portfolio.projects.shelltyBlog.tech', { returnObjects: true }),
             role: t('portfolio.projects.shelltyBlog.role', { defaultValue: 'Developer' }),
-            year: '2025',
+            year: '2026',
             caseStudyLink: t('portfolio.projects.shelltyBlog.case', { defaultValue: '' }) || null,
             testAccount: {
                 fields: [

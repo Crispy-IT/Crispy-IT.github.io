@@ -1,4 +1,3 @@
-
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -9,12 +8,14 @@ import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
+import CustomCursor from "./components/CustomCursor";
 
 import './App.css';
 
 function App() {
     return (
         <Router>
+            <CustomCursor />
             <Navbar />
 
             <main className="main-content">
