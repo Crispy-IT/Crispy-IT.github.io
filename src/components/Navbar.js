@@ -1,3 +1,4 @@
+// src/components/Navbar.js
 import React, { useRef, useEffect, useCallback, useMemo } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -36,8 +37,7 @@ const Navbar = () => {
             setPillToElement(active);
             try {
                 active.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-            } catch (_) {
-            }
+            } catch (_) {}
         } else {
             container.style.setProperty('--pill-opacity', '0');
         }
@@ -94,7 +94,7 @@ const Navbar = () => {
                 </ul>
             </nav>
 
-            <div className="header-lang-switcher">
+            <div className="header-lang-switcher" data-lang={i18n.language}>
                 <button
                     type="button"
                     className={i18n.language === 'pl' ? 'active' : ''}
@@ -103,7 +103,6 @@ const Navbar = () => {
                 >
                     PL
                 </button>
-                <span aria-hidden="true">|</span>
                 <button
                     type="button"
                     className={i18n.language === 'en' ? 'active' : ''}

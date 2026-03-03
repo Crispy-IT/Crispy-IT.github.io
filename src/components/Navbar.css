@@ -1,3 +1,4 @@
+/* src/components/Navbar.css */
 :root {
     --header-offset: 16px;
     --header-pad-x: clamp(16px, 4vw, 48px);
@@ -145,52 +146,65 @@
 }
 
 .header-lang-switcher {
-    display: flex;
-    align-items: center;
-    gap: 2px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background: var(--nav-bg);
     border: 1px solid var(--nav-border);
     border-radius: var(--radius-full);
-    padding: 4px 6px;
+    padding: 3px;
     box-shadow: var(--shadow-sm);
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     flex-shrink: 0;
 }
 
+.header-lang-switcher::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    width: calc(50% - 3px);
+    background: linear-gradient(135deg, var(--color-royal), rgba(12, 192, 255, 0.5));
+    border-radius: var(--radius-full);
+    box-shadow: 0 0 10px rgba(12, 192, 255, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.08);
+    transition: transform var(--transition-base);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.header-lang-switcher[data-lang="en"]::before {
+    transform: translateX(100%);
+}
+
 .header-lang-switcher button {
+    position: relative;
+    z-index: 1;
     background: transparent;
     border: 0;
     font-weight: 600;
     font-size: 0.8rem;
     cursor: pointer;
-    padding: 5px 8px;
+    padding: 5px 10px;
     color: var(--color-text-muted);
     border-radius: var(--radius-full);
-    transition: color var(--transition-fast), background var(--transition-fast);
-}
-
-.header-lang-switcher button:hover,
-.header-lang-switcher button:focus-visible {
-    color: var(--color-text);
-    background: rgba(255, 255, 255, 0.08);
+    transition: color var(--transition-fast);
+    text-align: center;
 }
 
 .header-lang-switcher button.active {
-    color: var(--color-bg);
-    background: var(--color-text);
+    color: var(--color-text);
 }
 
-.header-lang-switcher span {
-    color: rgba(148, 163, 184, 0.3);
-    margin: 0 1px;
+.header-lang-switcher button:hover:not(.active) {
+    color: var(--color-text-secondary);
 }
 
 body {
     padding-top: 0px;
 }
-
-
 
 @media (max-width: 768px) {
     :root {
