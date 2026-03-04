@@ -1,9 +1,28 @@
-// src/components/Navbar.js
+// src/components/Navbar/Navbar.js
 import React, { useRef, useEffect, useCallback, useMemo } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './Navbar.css';
-import LogoHorizontal from './assets/logo_horizontaly';
+import LogoHorizontal from '../../assets/logo/logo_horizontaly';
+import GlowIcon from '../GlowIcon/GlowIcon';
+
+import homeIcon from '../../assets/icons/home/home.png';
+import homeGlow from '../../assets/icons/home/home_glow.png';
+
+import aboutIcon from '../../assets/icons/about/about.png';
+import aboutGlow from '../../assets/icons/about/about_glow.png';
+
+import experienceIcon from '../../assets/icons/experience/experience.png';
+import experienceGlow from '../../assets/icons/experience/experience_glow.png';
+
+import skillsIcon from '../../assets/icons/skills/skills.png';
+import skillsGlow from '../../assets/icons/skills/skills_glow.png';
+
+import portfolioIcon from '../../assets/icons/portfolio/portfolio.png';
+import portfolioGlow from '../../assets/icons/portfolio/portfolio_glow.png';
+
+import contactIcon from '../../assets/icons/contact/contact.png';
+import contactGlow from '../../assets/icons/contact/contact_glow.png';
 
 const Navbar = () => {
     const { t, i18n } = useTranslation();
@@ -11,12 +30,12 @@ const Navbar = () => {
     const location = useLocation();
 
     const navItems = useMemo(() => ([
-        { to: '/', labelKey: 'nav.home' },
-        { to: '/about', labelKey: 'nav.about' },
-        { to: '/experience', labelKey: 'nav.experience' },
-        { to: '/skills', labelKey: 'nav.skills' },
-        { to: '/portfolio', labelKey: 'nav.portfolio' },
-        { to: '/contact', labelKey: 'nav.contact' },
+        { to: '/', labelKey: 'nav.home', icon: homeIcon, iconGlow: homeGlow },
+        { to: '/about', labelKey: 'nav.about', icon: aboutIcon, iconGlow: aboutGlow },
+        { to: '/experience', labelKey: 'nav.experience', icon: experienceIcon, iconGlow: experienceGlow },
+        { to: '/skills', labelKey: 'nav.skills', icon: skillsIcon, iconGlow: skillsGlow },
+        { to: '/portfolio', labelKey: 'nav.portfolio', icon: portfolioIcon, iconGlow: portfolioGlow },
+        { to: '/contact', labelKey: 'nav.contact', icon: contactIcon, iconGlow: contactGlow },
     ]), []);
 
     const setPillToElement = useCallback((el) => {
@@ -87,7 +106,14 @@ const Navbar = () => {
                                 className={({ isActive }) => (isActive ? 'active' : '')}
                                 end={item.to === '/'}
                             >
-                                {t(item.labelKey)}
+                                <GlowIcon
+                                    src={item.icon}
+                                    srcGlow={item.iconGlow}
+                                    alt=""
+                                    size={30}
+                                    className="nav-glow-icon"
+                                />
+                                <span>{t(item.labelKey)}</span>
                             </NavLink>
                         </li>
                     ))}

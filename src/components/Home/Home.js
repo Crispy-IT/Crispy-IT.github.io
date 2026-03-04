@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { HashLink } from 'react-router-hash-link';
 import { useTranslation } from "react-i18next";
-import LogoSVG from "./assets/logo_vertical";
+import LogoSVG from "../../assets/logo/logo_vertical";
 
 const ROLES_PL = [
     "Specjalista IT",

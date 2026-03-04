@@ -1,6 +1,11 @@
+/* src/components/Skills/Skills.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
 .skills {
     position: relative;
     padding: clamp(64px, 8vh, 96px) 20px;
+    padding-top: 130px;
     color: #f1f5f9;
     background-color: transparent;
 }
@@ -13,17 +18,28 @@
 .skills__header {
     text-align: center;
     margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.skills__header .glow-icon {
+    margin-bottom: -5px;
 }
 
 .skills__title {
-    font-size: clamp(28px, 5vw, 42px);
-    font-weight: 800;
-    margin: 0;
-    letter-spacing: -0.02em;
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(24px, 4vw, 44px);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     background: linear-gradient(135deg, #0cc0ff, #0062b0);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    margin: 0;
 }
 
 .skills__kicker {
@@ -110,6 +126,12 @@
 @media (max-width: 920px) {
     .sk-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 720px) {
+    .skills {
+        padding-top: 120px;
     }
 }
 

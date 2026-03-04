@@ -1,3 +1,4 @@
+// src/components/Experience/Experience.js
 import React from "react";
 import "./Experience.css";
 import {
@@ -12,6 +13,9 @@ import {
     FaCogs,
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import GlowIcon from "../GlowIcon/GlowIcon";
+import experienceIcon from "../../assets/icons/experience/experience.png";
+import experienceGlow from "../../assets/icons/experience/experience_glow.png";
 
 const Experience = () => {
     const { t } = useTranslation();
@@ -20,14 +24,17 @@ const Experience = () => {
         <section id="experience" className="exp">
             <div className="exp__container">
                 <header className="exp__header">
-                    <h2 className="exp__title">
-                        {t("experience.title").split(" ")[0]} <span>{t("experience.title").split(" ")[1] || ""}</span>
-                    </h2>
-                    <p className="exp__kicker">{t("experience.kicker")}</p>
+                    <GlowIcon
+                        src={experienceIcon}
+                        srcGlow={experienceGlow}
+                        alt="Experience"
+                        size={200}
+                        floating
+                    />
+                    <h2 className="exp__title">{t("experience.title")}</h2>
                 </header>
 
                 <ol className="exp__timeline">
-                    {/* Streetcom */}
                     <li className="exp__item">
                         <div className="exp__pin" aria-hidden="true" />
                         <div className="exp__card">
@@ -55,7 +62,6 @@ const Experience = () => {
                         </div>
                     </li>
 
-                    {/* ATA */}
                     <li className="exp__item">
                         <div className="exp__pin" aria-hidden="true" />
                         <div className="exp__card">
@@ -82,7 +88,6 @@ const Experience = () => {
                         </div>
                     </li>
 
-                    {/* Hisert */}
                     <li className="exp__item">
                         <div className="exp__pin" aria-hidden="true" />
                         <div className="exp__card">
@@ -109,7 +114,6 @@ const Experience = () => {
                         </div>
                     </li>
 
-                    {/* RZGW */}
                     <li className="exp__item">
                         <div className="exp__pin" aria-hidden="true" />
                         <div className="exp__card">
@@ -135,7 +139,6 @@ const Experience = () => {
                         </div>
                     </li>
 
-                    {/* Exorigo-Upos */}
                     <li className="exp__item">
                         <div className="exp__pin" aria-hidden="true" />
                         <div className="exp__card">
@@ -160,7 +163,6 @@ const Experience = () => {
                         </div>
                     </li>
 
-                    {/* WASKO */}
                     <li className="exp__item">
                         <div className="exp__pin" aria-hidden="true" />
                         <div className="exp__card">
@@ -181,7 +183,6 @@ const Experience = () => {
                         </div>
                     </li>
 
-                    {/* EOT */}
                     <li className="exp__item">
                         <div className="exp__pin" aria-hidden="true" />
                         <div className="exp__card">

@@ -1,6 +1,11 @@
+/* src/components/Portfolio/Portfolio.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
 .portfolio-container {
     position: relative;
     padding: clamp(32px, 5vw, 56px) 0;
+    padding-top: 120px;
     background-color: transparent;
     overflow: hidden;
 }
@@ -19,22 +24,33 @@
 .portfolio-header {
     text-align: center;
     margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.portfolio-header .glow-icon {
+    margin-bottom: -15px;
 }
 
 .portfolio-title {
-    font-size: clamp(28px, 4.5vw, 48px);
-    line-height: 1.1;
-    font-weight: 800;
-    letter-spacing: -0.02em;
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(24px, 4vw, 44px);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     background: linear-gradient(135deg, #0cc0ff, #0062b0);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    margin: 0;
 }
 
 .portfolio-subtitle {
     color: #94a3b8;
-    margin-top: 10px;
+    margin-top: 8px;
     font-size: 1.05rem;
 }
 
@@ -48,6 +64,10 @@
 @media (max-width: 720px) {
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .portfolio-container {
+        padding-top: 120px;
     }
 }
 

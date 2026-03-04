@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Skills from "./components/Skills";
-import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Experience from "./components/Experience/Experience";
+import Skills from "./components/Skills/Skills";
+import Portfolio from "./components/Portfolio/Portfolio";
+import Contact from "./components/Contact/Contact";
 import CustomCursor from "./components/CustomCursor";
 import CloudBackground from "./background/CloudBackground";
 
@@ -16,7 +16,6 @@ import './App.css';
 function App() {
     return (
         <Router>
-            {/* ▼ Tło WebGL — fixed, pod całą zawartością */}
             <CloudBackground />
 
             <CustomCursor />

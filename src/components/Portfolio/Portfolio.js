@@ -1,18 +1,22 @@
+// src/components/Portfolio/Portfolio.js
 import React, { useMemo, useState, useEffect, useCallback } from 'react';
 import './Portfolio.css';
 import { FaGithub, FaExternalLinkAlt, FaKey, FaCopy, FaCheck } from 'react-icons/fa';
 import { useTranslation, Trans } from 'react-i18next';
 
-import mobisalonThumbnail from './assets/mobisalon.jpg';
-import ksefThumbnail from './assets/ksef-master.jpg';
-import ksefThumbnailAng from './assets/ksef_master_ang.jpg';
-import smartquoteThumbnail from './assets/smartquote.jpg';
-import smartquoteThumbnailAng from './assets/smart_quoute_ang.jpg';
-import postlioThumbnail from './assets/postlio.jpg';
-import postlioThumbnailAng from './assets/postlio_ang.jpg';
-import cookbookThumbnail from './assets/mobile_cook.jpg';
-import animalsThumbnail from './assets/one_page_animals.jpg';
-import shelltyBlogThumbnail from './assets/shellty_blog.jpg';
+import mobisalonThumbnail from '../../assets/thumbnails/mobisalon.jpg';
+import ksefThumbnail from '../../assets/thumbnails/ksef-master.jpg';
+import ksefThumbnailAng from '../../assets/thumbnails/ksef_master_ang.jpg';
+import smartquoteThumbnail from '../../assets/thumbnails/smartquote.jpg';
+import smartquoteThumbnailAng from '../../assets/thumbnails/smart_quoute_ang.jpg';
+import postlioThumbnail from '../../assets/thumbnails/postlio.jpg';
+import postlioThumbnailAng from '../../assets/thumbnails/postlio_ang.jpg';
+import cookbookThumbnail from '../../assets/thumbnails/mobile_cook.jpg';
+import animalsThumbnail from '../../assets/thumbnails/one_page_animals.jpg';
+import shelltyBlogThumbnail from '../../assets/thumbnails/shellty_blog.jpg';
+import GlowIcon from '../GlowIcon/GlowIcon';
+import portfolioIcon from '../../assets/icons/portfolio/portfolio.png';
+import portfolioGlow from '../../assets/icons/portfolio/portfolio_glow.png';
 
 const CopyButton = ({ text, label }) => {
     const [copied, setCopied] = useState(false);
@@ -216,6 +220,13 @@ const Portfolio = () => {
             <div className="gradient-background" aria-hidden="true"></div>
             <div className="content-wrapper">
                 <header className="portfolio-header animate-fade-in">
+                    <GlowIcon
+                        src={portfolioIcon}
+                        srcGlow={portfolioGlow}
+                        alt="Portfolio"
+                        size={200}
+                        floating
+                    />
                     <h1 className="portfolio-title">{t('portfolio.title')}</h1>
                     <p className="portfolio-subtitle">
                         <Trans

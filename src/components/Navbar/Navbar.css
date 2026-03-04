@@ -1,4 +1,5 @@
-/* src/components/Navbar.css */
+/* src/components/Navbar/Navbar.css */
+
 :root {
     --header-offset: 16px;
     --header-pad-x: clamp(16px, 4vw, 48px);
@@ -26,7 +27,7 @@
 
 .main-header {
     position: fixed;
-    top: 0;
+    top: 16px;
     left: 0;
     right: 0;
     padding: 0 var(--header-pad-x);
@@ -78,7 +79,7 @@
 
 .main-nav {
     position: relative;
-    padding: 10px 22px;
+    padding: 12px 22px;
     border-radius: var(--nav-radius);
     background: var(--nav-bg);
     border: 1px solid var(--nav-border);
@@ -89,8 +90,8 @@
 
 .main-nav ul {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    align-items: flex-end;
+    gap: 16px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -103,12 +104,15 @@
 
 .main-nav a {
     position: relative;
-    display: inline-block;
-    padding: 6px 12px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
     color: var(--color-text-secondary);
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     letter-spacing: 0.2px;
     cursor: pointer;
     transition: color var(--transition-fast), transform var(--transition-fast);
@@ -117,9 +121,9 @@
 .main-nav a::after {
     content: "";
     position: absolute;
-    bottom: 2px;
-    left: 12px;
-    right: 12px;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
     height: 2px;
     background: linear-gradient(90deg, var(--color-royal), var(--color-sky));
     border-radius: 999px;
@@ -130,7 +134,7 @@
 
 .main-nav a:hover {
     color: var(--color-text);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
 .main-nav a:hover::after {
@@ -143,6 +147,21 @@
 
 .main-nav a.active::after {
     transform: scaleX(1);
+}
+
+.main-nav .nav-glow-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.main-nav li:hover .nav-glow-icon .glow-icon-base,
+.main-nav a.active .nav-glow-icon .glow-icon-base {
+    opacity: 0;
+}
+
+.main-nav li:hover .nav-glow-icon .glow-icon-lit,
+.main-nav a.active .nav-glow-icon .glow-icon-lit {
+    opacity: 1;
 }
 
 .header-lang-switcher {
@@ -211,6 +230,10 @@ body {
         --logo-height: clamp(42px, 10vw, 56px);
     }
 
+    .main-header {
+        top: 8px;
+    }
+
     body {
         padding-top: 55px;
     }
@@ -237,7 +260,7 @@ body {
         align-items: center;
         justify-content: flex-start;
         width: min(100%, 96vw);
-        padding: 8px 16px;
+        padding: 8px 12px;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
@@ -250,7 +273,7 @@ body {
     .main-nav ul {
         display: flex;
         flex-wrap: nowrap;
-        gap: clamp(10px, 3vw, 16px);
+        gap: clamp(6px, 2vw, 12px);
         width: max-content;
     }
 
@@ -259,8 +282,14 @@ body {
     }
 
     .main-nav a {
-        font-size: clamp(0.78rem, 3vw, 0.88rem);
-        padding: 5px 7px;
+        font-size: clamp(0.68rem, 2.5vw, 0.78rem);
+        padding: 4px 6px;
+        gap: 3px;
+    }
+
+    .main-nav .nav-glow-icon {
+        width: 48px;
+        height: 48px;
     }
 }
 

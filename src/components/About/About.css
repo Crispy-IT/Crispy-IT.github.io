@@ -1,6 +1,11 @@
+/* src/components/About/About.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
 .about {
     position: relative;
     padding: 5rem 1.5rem;
+    padding-top: 140px;
     color: #f1f5f9;
     background-color: transparent;
     overflow: hidden;
@@ -16,18 +21,28 @@
 .about__header {
     text-align: center;
     margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.about__header .glow-icon {
+    margin-bottom: -5px;
 }
 
 .about__title {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(24px, 4vw, 44px);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #0cc0ff, #0062b0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     margin: 0;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    color: #f1f5f9;
-}
-
-.about__title span {
-    color: #226eeb;
 }
 
 .about__kicker {
@@ -412,15 +427,20 @@
     display: none;
 }
 
-
 .about__blob {
     display: none;
+}
+
+#about {
+    scroll-margin-top: 80px;
 }
 
 @media (max-width: 900px) {
     .about__grid {
         grid-template-columns: 1fr;
     }
+
+    text
 
     .about__sidebar {
         width: 100%;
@@ -445,6 +465,13 @@
 
     .about__social {
         justify-content: center;
+    }
+
+}
+
+@media (max-width: 720px) {
+    .about {
+        padding-top: 120px;
     }
 }
 

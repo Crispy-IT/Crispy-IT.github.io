@@ -35,8 +35,7 @@
     "altText": "Logo"
   },
   "about": {
-    "title": "Shellty",
-    "kicker": "Infrastructure • Support • Development",
+    "title": "Bio",
     "videoInvite": "If you prefer listening over reading – feel free to watch my short video introduction",
     "videoInviteDirDesktop": " on the right.",
     "videoInviteDirMobile": " below.",
@@ -98,7 +97,6 @@
   },
   "experience": {
     "title": "Professional experience",
-    "kicker": "Stability • Automation • Support • Development",
     "jobs": {
       "streetcom": {
         "where": "Streetcom • IT Systems Administrator & Junior Developer",

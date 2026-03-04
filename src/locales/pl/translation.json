@@ -35,8 +35,7 @@
     "altText": "Logo"
   },
   "about": {
-    "title": "Shellty",
-    "kicker": "Infrastruktura • Wsparcie • Development",
+    "title": "Bio",
     "p1": "Cześć! Tu Tomasz Skorupski. Przez lata dbałem o to, by systemy informatyczne działały bezawaryjnie – administrując serwerami (Windows/Linux), sieciami i bazami danych. Zrozumiałem jednak, że chcę nie tylko naprawiać, utrzymywać i zmieniać, ale przede wszystkim tworzyć. Dziś wykorzystuję to solidne, techniczne zaplecze do budowania i usprawniania rozwiązań.",
     "videoInvite": "Jeśli wolisz słuchać, niż czytać – zapraszam do obejrzenia mojej krótkiej prezentacji wideo",
     "videoInviteDirDesktop": " po prawej stronie.",
@@ -99,7 +98,6 @@
   },
   "skills": {
     "title": "Umiejętności",
-    "kicker": "Systemy • Sieci • Bazy danych • DevOps • React",
     "legend": {
       "adv": "Zaawansowany",
       "mid": "Średniozaawansowany",

@@ -1,6 +1,10 @@
+// src/components/Contact/Contact.js
 import React, { useState, useRef } from "react";
 import "./Contact.css";
 import { useTranslation } from "react-i18next";
+import GlowIcon from "../GlowIcon/GlowIcon";
+import contactIcon from "../../assets/icons/contact/contact.png";
+import contactGlow from "../../assets/icons/contact/contact_glow.png";
 
 export default function Contact() {
     const { t } = useTranslation();
@@ -73,16 +77,19 @@ export default function Contact() {
 
     return (
         <section className="contact-section" id="contact">
-            <div className="contact-card">
-                <div className="contact-header">
-                    <h2>
-                        {t("contact.title").split(" ")[0]} <span>{t("contact.title").split(" ")[1] || ""}</span>
-                    </h2>
-                    <p className="contact-subtitle">
-                        {t("contact.subtitle")}
-                    </p>
-                </div>
+            <header className="contact-header">
+                <GlowIcon
+                    src={contactIcon}
+                    srcGlow={contactGlow}
+                    alt="Contact"
+                    size={250}
+                    floating
+                />
+                <h2 className="contact-title">{t("contact.title")}</h2>
+                <p className="contact-subtitle">{t("contact.subtitle")}</p>
+            </header>
 
+            <div className="contact-card">
                 <form ref={formRef} className="contact-form" onSubmit={handleSubmit} noValidate>
                     <label className={fieldClass("name")}>
                         {t("contact.fields.name")}
@@ -97,8 +104,8 @@ export default function Contact() {
                         />
                         {touched.name && errors.name && (
                             <span id="err-name" className="error-text" role="alert">
-                {errors.name}
-              </span>
+                                {errors.name}
+                            </span>
                         )}
                     </label>
 
@@ -116,8 +123,8 @@ export default function Contact() {
                         />
                         {touched.email && errors.email && (
                             <span id="err-email" className="error-text" role="alert">
-                {errors.email}
-              </span>
+                                {errors.email}
+                            </span>
                         )}
                     </label>
 
@@ -135,8 +142,8 @@ export default function Contact() {
                         />
                         {touched.message && errors.message && (
                             <span id="err-message" className="error-text" role="alert">
-                {errors.message}
-              </span>
+                                {errors.message}
+                            </span>
                         )}
                     </label>
 

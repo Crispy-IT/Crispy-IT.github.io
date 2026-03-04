@@ -1,3 +1,4 @@
+// src/components/About/About.js
 import React, { useState, useEffect, useCallback } from "react";
 import { HashLink } from "react-router-hash-link";
 import "./About.css";
@@ -11,6 +12,9 @@ import {
     FaGraduationCap,
 } from "react-icons/fa";
 import { useTranslation, Trans } from "react-i18next";
+import GlowIcon from "../GlowIcon/GlowIcon";
+import aboutIcon from "../../assets/icons/about/about.png";
+import aboutGlow from "../../assets/icons/about/about_glow.png";
 
 const RING_SIZE = 88;
 const RING_STROKE = 10;
@@ -87,19 +91,19 @@ const VideoCard = ({ vimeoId, t }) => {
                             />
                         )}
                         <span className="about__video-play-icon" aria-hidden="true">
-              <svg
-                  viewBox="0 0 68 48"
-                  width="68"
-                  height="48"
-                  xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                    d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.63-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"
-                    fill="rgba(12,192,255,.85)"
-                />
-                <path d="M45 24L27 14v20" fill="#fff" />
-              </svg>
-            </span>
+                            <svg
+                                viewBox="0 0 68 48"
+                                width="68"
+                                height="48"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.63-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"
+                                    fill="rgba(12,192,255,.85)"
+                                />
+                                <path d="M45 24L27 14v20" fill="#fff" />
+                            </svg>
+                        </span>
                     </button>
                 ) : (
                     <iframe
@@ -119,17 +123,6 @@ const About = () => {
     const { t } = useTranslation();
     const vimeoId = t("about.video.vimeoId");
 
-    const renderTitle = useCallback(() => {
-        const title = t("about.title");
-        const idx = title.indexOf("Shellty");
-        if (idx === -1) return title;
-        return (
-            <>
-                {title.slice(0, idx)}Shell<span>ty</span>{title.slice(idx + 7)}
-            </>
-        );
-    }, [t]);
-
     return (
         <section id="about" className="about">
             <span className="about__blob about__blob--a" />
@@ -137,8 +130,14 @@ const About = () => {
 
             <div className="about__container">
                 <header className="about__header animate-fade-in">
-                    <h2 className="about__title">{renderTitle()}</h2>
-                    <p className="about__kicker">{t("about.kicker")}</p>
+                    <GlowIcon
+                        src={aboutIcon}
+                        srcGlow={aboutGlow}
+                        alt="About"
+                        size={200}
+                        floating
+                    />
+                    <h2 className="about__title">{t("about.title")}</h2>
                 </header>
 
                 <div className="about__grid">
@@ -150,11 +149,11 @@ const About = () => {
                         <p className="about__video-invite">
                             🎬&ensp;{t("about.videoInvite")}
                             <span className="about__video-dir--desktop">
-                {t("about.videoInviteDirDesktop")}
-              </span>
+                                {t("about.videoInviteDirDesktop")}
+                            </span>
                             <span className="about__video-dir--mobile">
-                {t("about.videoInviteDirMobile")}
-              </span>
+                                {t("about.videoInviteDirMobile")}
+                            </span>
                         </p>
 
                         <p className="about__subhead">
@@ -295,7 +294,6 @@ const About = () => {
                         </aside>
                     </div>
                 </div>
-
             </div>
         </section>
     );

@@ -1,17 +1,57 @@
+/* src/components/Contact/Contact.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
 .contact-section {
     min-height: 60vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 120px 20px 60px;
+    padding: 70px 20px 60px;
     background-color: transparent;
     color: #f1f5f9;
     font-family: "Inter", system-ui, sans-serif;
 }
 
+.contact-header {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.contact-header .glow-icon {
+    margin-bottom: -60px;
+}
+
+.contact-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(24px, 4vw, 44px);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #0cc0ff, #0062b0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0 0 8px;
+}
+
+.contact-subtitle {
+    font-size: 1rem;
+    color: #94a3b8;
+    line-height: 1.7;
+    white-space: nowrap;
+    margin: 0;
+}
+
 .contact-card {
     width: 100%;
-    max-width: 860px;
+    max-width: 1000px;
     background-color: rgba(255, 255, 255, 0.04);
     border-radius: 20px;
     padding: 36px 32px;
@@ -33,34 +73,6 @@
     background: linear-gradient(90deg, transparent, rgba(12, 192, 255, 0.35), transparent);
 }
 
-.contact-header {
-    text-align: center;
-    margin-bottom: 32px;
-}
-
-.contact-header h2 {
-    margin: 0 0 10px;
-    font-size: clamp(24px, 4vw, 32px);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    color: #f1f5f9;
-}
-
-.contact-header h2 span {
-    background: linear-gradient(135deg, #0cc0ff, #0062b0);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.contact-header .contact-subtitle {
-    font-size: 1rem;
-    color: #94a3b8;
-    line-height: 1.7;
-    max-width: 85%;
-    margin: 0 auto;
-}
-
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -69,7 +81,8 @@
     margin: 0 auto;
 }
 
-.contact-form label {
+.contact-form label,
+.field {
     display: block;
     margin-bottom: 18px;
     font-size: 0.9rem;
@@ -104,6 +117,24 @@
     border-color: rgba(12, 192, 255, 0.55);
     box-shadow: 0 0 0 4px rgba(12, 192, 255, 0.12), 0 4px 14px rgba(12, 192, 255, 0.1);
     background-color: rgba(255, 255, 255, 0.04);
+}
+
+.field.has-error input,
+.field.has-error textarea {
+    border-color: rgba(239, 68, 68, 0.5);
+}
+
+.field.has-error input:focus,
+.field.has-error textarea:focus {
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.12), 0 4px 14px rgba(239, 68, 68, 0.1);
+}
+
+.error-text {
+    display: block;
+    margin-top: 6px;
+    color: #fca5a5;
+    font-size: 0.8rem;
+    font-weight: 500;
 }
 
 .contact-form button {
@@ -199,18 +230,27 @@
     scroll-margin-top: 80px;
 }
 
+@media (max-width: 800px) {
+    .contact-subtitle {
+        white-space: normal;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
 @media (max-width: 640px) {
     .contact-card {
         padding: 24px 20px;
         border-radius: 16px;
     }
 
-    .contact-header h2 {
+    .contact-title {
         font-size: 1.5rem;
     }
 
-    .contact-header .contact-subtitle {
+    .contact-subtitle {
         font-size: 0.9rem;
+        white-space: normal;
         max-width: 100%;
     }
 
