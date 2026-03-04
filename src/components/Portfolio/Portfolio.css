@@ -31,15 +31,14 @@
 }
 
 .portfolio-header .glow-icon {
-    margin-bottom: -15px;
+    margin-bottom: -25px;
 }
 
 .portfolio-title {
     font-family: 'Orbitron', sans-serif;
-    font-size: clamp(24px, 4vw, 44px);
+    font-size: clamp(20px, 3.5vw, 36px);
     line-height: 1.2;
     font-weight: 700;
-    letter-spacing: 0.05em;
     text-transform: uppercase;
     background: linear-gradient(135deg, #0cc0ff, #0062b0);
     -webkit-background-clip: text;
@@ -67,7 +66,7 @@
     }
 
     .portfolio-container {
-        padding-top: 120px;
+        padding-top: 0px;
     }
 }
 

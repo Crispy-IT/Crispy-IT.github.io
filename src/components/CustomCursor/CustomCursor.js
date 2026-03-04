@@ -1,4 +1,4 @@
-// src/components/CustomCursor.js
+// src/components/CustomCursor/CustomCursor.js
 import React, { useEffect, useRef, useCallback, useState } from 'react';
 import './CustomCursor.css';
 
@@ -21,6 +21,23 @@ const getTrailStyle = (i) => {
         background: `rgba(0, 229, 255, ${alpha})`,
         boxShadow: `0 0 ${glowSize}px ${Math.max(1, glowSize / 2)}px rgba(0, 229, 255, ${glowAlpha})`,
     };
+};
+
+// Helper funkcja do bezpiecznego sprawdzania closest
+const safeClosest = (target, selector) => {
+    if (
+        !target ||
+        typeof target.closest !== 'function' ||
+        target === document ||
+        target === window
+    ) {
+        return null;
+    }
+    try {
+        return target.closest(selector);
+    } catch (e) {
+        return null;
+    }
 };
 
 const CustomCursor = () => {
@@ -126,6 +143,11 @@ const CustomCursor = () => {
         };
 
         const onMouseMove = (e) => {
+            // Ignoruj zdarzenia dotykowe które mogą wyciekać
+            if (e.sourceCapabilities?.firesTouchEvents) {
+                return;
+            }
+
             mouse.current.x = e.clientX;
             mouse.current.y = e.clientY;
 
@@ -135,7 +157,9 @@ const CustomCursor = () => {
                 show();
             }
 
-            const hovering = !!e.target.closest(INTERACTIVE);
+            // Użyj bezpiecznej funkcji do sprawdzania closest
+            const hovering = !!safeClosest(e.target, INTERACTIVE);
+
             if (hovering !== isHovering.current) {
                 isHovering.current = hovering;
                 ringScale.current.target = hovering ? 1.15 : 1;

@@ -3,12 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
 .contact-section {
+    --icon-margin-top: 0px;
+    --icon-margin-bottom: -90px;
+    --icon-scale: 1;
+    --section-padding-top: 60px;
+
     min-height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 70px 20px 60px;
+    justify-content: flex-start;
+    padding: var(--section-padding-top) 20px 60px;
     background-color: transparent;
     color: #f1f5f9;
     font-family: "Inter", system-ui, sans-serif;
@@ -16,7 +21,7 @@
 
 .contact-header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,15 +29,17 @@
 }
 
 .contact-header .glow-icon {
-    margin-bottom: -60px;
+    margin-top: var(--icon-margin-top);
+    margin-bottom: var(--icon-margin-bottom);
+    transform: scale(var(--icon-scale));
+    transition: transform 0.3s ease, margin 0.3s ease;
 }
 
 .contact-title {
     font-family: 'Orbitron', sans-serif;
-    font-size: clamp(24px, 4vw, 44px);
+    font-size: clamp(20px, 3.5vw, 36px);
     line-height: 1.2;
     font-weight: 700;
-    letter-spacing: 0.05em;
     text-transform: uppercase;
     background: linear-gradient(135deg, #0cc0ff, #0062b0);
     -webkit-background-clip: text;
@@ -230,7 +237,15 @@
     scroll-margin-top: 80px;
 }
 
+/* ===== TABLET ===== */
 @media (max-width: 800px) {
+    .contact-section {
+        --icon-margin-top: -20px;
+        --icon-margin-bottom: -85px;
+        --icon-scale: 0.9;
+        --section-padding-top: 40px;
+    }
+
     .contact-subtitle {
         white-space: normal;
         max-width: 90%;
@@ -238,7 +253,19 @@
     }
 }
 
+/* ===== MOBILE ===== */
 @media (max-width: 640px) {
+    .contact-section {
+        --icon-margin-top: -100px;
+        --icon-margin-bottom: -80px;
+        --icon-scale: 0.75;
+        --section-padding-top: 20px;
+    }
+
+    .contact-header {
+        margin-bottom: 6px;
+    }
+
     .contact-card {
         padding: 24px 20px;
         border-radius: 16px;
@@ -262,5 +289,23 @@
     .contact-form button {
         width: 100%;
         padding: 14px 20px;
+    }
+}
+
+/* ===== BARDZO MAŁE EKRANY ===== */
+@media (max-width: 380px) {
+    .contact-section {
+        --icon-margin-top: -50px;
+        --icon-margin-bottom: -65px;
+        --icon-scale: 0.65;
+        --section-padding-top: 10px;
+    }
+
+    .contact-card {
+        padding: 20px 16px;
+    }
+
+    .contact-title {
+        font-size: 1.3rem;
     }
 }

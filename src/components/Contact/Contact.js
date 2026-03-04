@@ -82,7 +82,7 @@ export default function Contact() {
                     src={contactIcon}
                     srcGlow={contactGlow}
                     alt="Contact"
-                    size={250}
+                    size={300}
                     floating
                 />
                 <h2 className="contact-title">{t("contact.title")}</h2>

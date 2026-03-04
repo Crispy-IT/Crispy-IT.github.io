@@ -181,7 +181,7 @@ const Skills = () => {
                         src={skillsIcon}
                         srcGlow={skillsGlow}
                         alt="Skills"
-                        size={170}
+                        size={200}
                         floating
                     />
                     <h2 className="skills__title">

@@ -47,3 +47,11 @@ code {
 *, *::before, *::after {
     cursor: none !important;
 }
+
+.about__title,
+.exp__title,
+.skills__title,
+.portfolio-title,
+.contact-title {
+    letter-spacing: 0.00em !important;
+}

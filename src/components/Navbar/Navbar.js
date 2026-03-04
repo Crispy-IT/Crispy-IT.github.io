@@ -1,5 +1,5 @@
 // src/components/Navbar/Navbar.js
-import React, { useRef, useEffect, useCallback, useMemo } from 'react';
+import React, { useRef, useEffect, useCallback, useMemo, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './Navbar.css';
@@ -28,6 +28,7 @@ const Navbar = () => {
     const { t, i18n } = useTranslation();
     const linksContainerRef = useRef(null);
     const location = useLocation();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navItems = useMemo(() => ([
         { to: '/', labelKey: 'nav.home', icon: homeIcon, iconGlow: homeGlow },
@@ -75,6 +76,19 @@ const Navbar = () => {
         }
     };
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
+    // Zamknij menu po zmianie strony
+    useEffect(() => {
+        closeMenu();
+    }, [location.pathname]);
+
     useEffect(() => {
         setPillToActive();
     }, [location.pathname, setPillToActive]);
@@ -85,60 +99,94 @@ const Navbar = () => {
         return () => window.removeEventListener('resize', onResize);
     }, [setPillToActive]);
 
+    // Zablokuj scroll gdy menu jest otwarte
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isMenuOpen]);
+
     return (
-        <header className="main-header">
-            <div className="header-logo">
-                <NavLink to="/" className="logo-link" aria-label={t('logo.ariaLabel')}>
-                    <LogoHorizontal />
-                </NavLink>
-            </div>
+        <>
+            <header className="main-header">
+                <div className="header-logo">
+                    <NavLink to="/" className="logo-link" aria-label={t('logo.ariaLabel')}>
+                        <LogoHorizontal />
+                    </NavLink>
+                </div>
 
-            <nav
-                className="main-nav"
-                ref={linksContainerRef}
-                onMouseLeave={handleMouseLeave}
-            >
-                <ul>
-                    {navItems.map((item) => (
-                        <li key={item.to} onMouseEnter={handleMouseEnter}>
-                            <NavLink
-                                to={item.to}
-                                className={({ isActive }) => (isActive ? 'active' : '')}
-                                end={item.to === '/'}
-                            >
-                                <GlowIcon
-                                    src={item.icon}
-                                    srcGlow={item.iconGlow}
-                                    alt=""
-                                    size={30}
-                                    className="nav-glow-icon"
-                                />
-                                <span>{t(item.labelKey)}</span>
-                            </NavLink>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
+                <nav
+                    className={`main-nav ${isMenuOpen ? 'open' : ''}`}
+                    ref={linksContainerRef}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <ul>
+                        {navItems.map((item) => (
+                            <li key={item.to} onMouseEnter={handleMouseEnter}>
+                                <NavLink
+                                    to={item.to}
+                                    className={({ isActive }) => (isActive ? 'active' : '')}
+                                    end={item.to === '/'}
+                                    onClick={closeMenu}
+                                >
+                                    <GlowIcon
+                                        src={item.icon}
+                                        srcGlow={item.iconGlow}
+                                        alt=""
+                                        size={30}
+                                        className="nav-glow-icon"
+                                    />
+                                    <span>{t(item.labelKey)}</span>
+                                </NavLink>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
 
-            <div className="header-lang-switcher" data-lang={i18n.language}>
-                <button
-                    type="button"
-                    className={i18n.language === 'pl' ? 'active' : ''}
-                    onClick={() => handleLangChange('pl')}
-                    aria-pressed={i18n.language === 'pl'}
-                >
-                    PL
-                </button>
-                <button
-                    type="button"
-                    className={i18n.language === 'en' ? 'active' : ''}
-                    onClick={() => handleLangChange('en')}
-                    aria-pressed={i18n.language === 'en'}
-                >
-                    EN
-                </button>
-            </div>
-        </header>
+                <div className="header-right">
+                    <div className="header-lang-switcher" data-lang={i18n.language}>
+                        <button
+                            type="button"
+                            className={i18n.language === 'pl' ? 'active' : ''}
+                            onClick={() => handleLangChange('pl')}
+                            aria-pressed={i18n.language === 'pl'}
+                        >
+                            PL
+                        </button>
+                        <button
+                            type="button"
+                            className={i18n.language === 'en' ? 'active' : ''}
+                            onClick={() => handleLangChange('en')}
+                            aria-pressed={i18n.language === 'en'}
+                        >
+                            EN
+                        </button>
+                    </div>
+
+                    <button
+                        className={`hamburger ${isMenuOpen ? 'open' : ''}`}
+                        onClick={toggleMenu}
+                        aria-label={isMenuOpen ? 'Zamknij menu' : 'Otwórz menu'}
+                        aria-expanded={isMenuOpen}
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </header>
+
+            {/* Overlay do zamykania menu */}
+            <div
+                className={`menu-overlay ${isMenuOpen ? 'open' : ''}`}
+                onClick={closeMenu}
+            />
+        </>
     );
 };
 

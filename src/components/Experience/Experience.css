@@ -3,9 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
 .exp {
+    --icon-margin-top: 0px;
+    --icon-margin-bottom: -35px;
+    --icon-scale: 1;
+    --section-padding-top: 110px;
+
     position: relative;
     padding: clamp(64px, 8vh, 96px) 20px;
-    padding-top: 110px;
+    padding-top: var(--section-padding-top);
     color: #f1f5f9;
     background-color: transparent;
 }
@@ -25,15 +30,17 @@
 }
 
 .exp__header .glow-icon {
-    margin-bottom: -25px;
+    margin-top: var(--icon-margin-top);
+    margin-bottom: var(--icon-margin-bottom);
+    transform: scale(var(--icon-scale));
+    transition: transform 0.3s ease, margin 0.3s ease;
 }
 
 .exp__title {
     font-family: 'Orbitron', sans-serif;
-    font-size: clamp(24px, 4vw, 44px);
+    font-size: clamp(20px, 3.5vw, 36px);
     line-height: 1.2;
     font-weight: 700;
-    letter-spacing: 0.05em;
     text-transform: uppercase;
     background: linear-gradient(135deg, #0cc0ff, #0062b0);
     -webkit-background-clip: text;
@@ -189,9 +196,23 @@
     scroll-margin-top: 80px;
 }
 
+/* ===== TABLET ===== */
+@media (max-width: 800px) {
+    .exp {
+        --icon-margin-top: -15px;
+        --icon-margin-bottom: -40px;
+        --icon-scale: 0.9;
+        --section-padding-top: 80px;
+    }
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 720px) {
     .exp {
-        padding-top: 120px;
+        --icon-margin-top: -80px;
+        --icon-margin-bottom: -35px;
+        --icon-scale: 0.75;
+        --section-padding-top: 40px;
     }
 
     .exp__item {
@@ -211,5 +232,31 @@
         left: 7px;
         width: 14px;
         height: 14px;
+    }
+
+    .exp__header {
+        margin-bottom: -10px;
+    }
+}
+
+/* ===== BARDZO MAŁE EKRANY ===== */
+@media (max-width: 380px) {
+    .exp {
+        --icon-margin-top: -40px;
+        --icon-margin-bottom: -50px;
+        --icon-scale: 0.65;
+        --section-padding-top: 20px;
+    }
+
+    .exp__card {
+        padding: 14px 16px;
+    }
+
+    .exp__where {
+        font-size: 1rem;
+    }
+
+    .exp__meta {
+        font-size: 0.8rem;
     }
 }

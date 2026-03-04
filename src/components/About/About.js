@@ -134,7 +134,7 @@ const About = () => {
                         src={aboutIcon}
                         srcGlow={aboutGlow}
                         alt="About"
-                        size={180}
+                        size={220}
                         floating
                     />
                     <h2 className="about__title">{t("about.title")}</h2>

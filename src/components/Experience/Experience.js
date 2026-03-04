@@ -28,7 +28,7 @@ const Experience = () => {
                         src={experienceIcon}
                         srcGlow={experienceGlow}
                         alt="Experience"
-                        size={200}
+                        size={240}
                         floating
                     />
                     <h2 className="exp__title">{t("experience.title")}</h2>
