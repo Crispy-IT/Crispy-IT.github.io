@@ -187,8 +187,6 @@ const Skills = () => {
                     <h2 className="skills__title">
                         {t("skills.title")}
                     </h2>
-                    <p className="skills__kicker">{t("skills.kicker")}</p>
-
                     <dl className="skills__legend" aria-label={t("skills.legend.aria", { defaultValue: "Legenda poziomów umiejętności" })}>
                         <div className="legend-item">
                             <dt><b>{t("skills.legend.adv")}</b></dt>

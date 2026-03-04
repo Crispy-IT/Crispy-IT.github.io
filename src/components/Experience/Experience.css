@@ -5,7 +5,7 @@
 .exp {
     position: relative;
     padding: clamp(64px, 8vh, 96px) 20px;
-    padding-top: 100px;
+    padding-top: 110px;
     color: #f1f5f9;
     background-color: transparent;
 }
@@ -25,7 +25,7 @@
 }
 
 .exp__header .glow-icon {
-    margin-bottom: -30px;
+    margin-bottom: -25px;
 }
 
 .exp__title {
