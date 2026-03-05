@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.f87b8494.css",
-    "main.js": "./static/js/main.febd2324.js",
+    "main.css": "./static/css/main.536f3969.css",
+    "main.js": "./static/js/main.940f96f3.js",
     "static/js/453.16a4f57f.chunk.js": "./static/js/453.16a4f57f.chunk.js",
     "static/media/skills_glow.png": "./static/media/skills_glow.665bbceb930030698a6d.png",
     "static/media/skills.png": "./static/media/skills.1eea458e2e2a6904d2db.png",
@@ -15,7 +15,9 @@
     "static/media/smart_quoute_ang.jpg": "./static/media/smart_quoute_ang.c9fdacb23806616432dc.jpg",
     "static/media/portfolio.png": "./static/media/portfolio.3f1fca3eec5e11674508.png",
     "static/media/experience2.png": "./static/media/experience2.34129ec96e2cbe86e3ce.png",
+    "static/media/cv_glow.png": "./static/media/cv_glow.ab6bacd2dd1451543dd0.png",
     "static/media/postlio.jpg": "./static/media/postlio.492c29478da272321c93.jpg",
+    "static/media/cv.png": "./static/media/cv.b29533596c15517970f5.png",
     "static/media/contact_glow.png": "./static/media/contact_glow.121bc3217245a633b62c.png",
     "static/media/postlio_ang.jpg": "./static/media/postlio_ang.a5aaad6eb39057970e03.jpg",
     "static/media/about_glow.png": "./static/media/about_glow.a94b2707e86e1eae9e08.png",
@@ -27,12 +29,12 @@
     "static/media/one_page_animals.jpg": "./static/media/one_page_animals.d755806544ebecba9eda.jpg",
     "static/media/smartquote.jpg": "./static/media/smartquote.2f52e82d1f6e956f8182.jpg",
     "index.html": "./index.html",
-    "main.f87b8494.css.map": "./static/css/main.f87b8494.css.map",
-    "main.febd2324.js.map": "./static/js/main.febd2324.js.map",
+    "main.536f3969.css.map": "./static/css/main.536f3969.css.map",
+    "main.940f96f3.js.map": "./static/js/main.940f96f3.js.map",
     "453.16a4f57f.chunk.js.map": "./static/js/453.16a4f57f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f87b8494.css",
-    "static/js/main.febd2324.js"
+    "static/css/main.536f3969.css",
+    "static/js/main.940f96f3.js"
   ]
 }
