@@ -11,12 +11,12 @@
     "greeting": "Cześć! Nazywam\u00A0się",
     "name": "Tomasz Skorupski",
     "lead": "Projektuję, wdrażam i utrzymuję systemy oraz infrastrukturę IT, które zapewniają firmom stabilne i bezpieczne funkcjonowanie. Oferuję administrację, obsługę sieci, tworzenie dopasowanych rozwiązań oraz bieżące wsparcie techniczne.\nAktualnie tworzę własne rozwiązania biznesowe i aktywnie poszukuję długoterminowej współpracy.",
-    "ctaPortfolio": "🚀 Zobacz portfolio",
-    "ctaCv": "📄 Pobierz CV",
-    "ctaContact": "✉️ Kontakt",
+    "ctaPortfolio": "Zobacz portfolio",
+    "ctaCv": "Pobierz CV",
+    "ctaContact": "Kontakt",
     "stats": {
       "years": { "num": "7+", "label": "lat w IT" },
-      "projects": { "num": "5+", "label": "projekty własne (CMS, PWA)" },
+      "projects": { "num": "5+", "label": "projekty własne" },
       "english": { "num": "B2", "label": "angielski" }
     },
     "caption": "Technologiczny fundament Twojego biznesu",

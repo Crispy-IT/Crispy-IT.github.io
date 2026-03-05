@@ -4,6 +4,13 @@ import { HashLink } from 'react-router-hash-link';
 import { useTranslation } from "react-i18next";
 import LogoSVG from "../../assets/logo/logo_vertical";
 
+import cvIcon from '../../assets/icons/cv/cv.png';
+import cvGlowIcon from '../../assets/icons/cv/cv_glow.png';
+import portfolioIcon from '../../assets/icons/portfolio/portfolio.png';
+import portfolioGlowIcon from '../../assets/icons/portfolio/portfolio_glow.png';
+import contactIcon from '../../assets/icons/contact/contact.png';
+import contactGlowIcon from '../../assets/icons/contact/contact_glow.png';
+
 const ROLES_PL = [
     "Specjalista IT",
     "SysAdmin",
@@ -58,9 +65,6 @@ export default function Home() {
         return () => clearInterval(blinkTimer);
     }, []);
 
-    /**
-     * @param {React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>} e
-     */
     const handleMagnet = (e) => {
         const btn = e.currentTarget;
         const rect = btn.getBoundingClientRect();
@@ -77,14 +81,8 @@ export default function Home() {
     const GITHUB_CV_RAW = `https://raw.githubusercontent.com/Shellty-IT/Shellty-IT.github.io/main/public/cv/${CV_FILE}`;
     const GITHUB_CV_CDN = `https://cdn.jsdelivr.net/gh/Shellty-IT/Shellty-IT.github.io@main/public/cv/${CV_FILE}`;
 
-    /**
-     * @param {React.MouseEvent<HTMLAnchorElement>} e
-     */
     const downloadCV = async (e) => {
         e.preventDefault();
-        /**
-         * @param {string} url
-         */
         const tryDownload = async (url) => {
             const res = await fetch(url, { mode: 'cors', cache: 'no-store' });
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -134,11 +132,15 @@ export default function Home() {
 
                     <div className="hero__cta">
                         <HashLink
-                            className="btn-glow"
+                            className="btn-glass"
                             onMouseMove={handleMagnet}
                             smooth
                             to="/portfolio#portfolio"
                         >
+                        <span className="btn-icon-wrap">
+                                <img src={portfolioIcon} alt="" className="btn-icon btn-icon--default" />
+                                <img src={portfolioGlowIcon} alt="" className="btn-icon btn-icon--glow" />
+                            </span>
                             <span>{t("home.ctaPortfolio")}</span>
                         </HashLink>
 
@@ -150,16 +152,24 @@ export default function Home() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            {t("home.ctaCv")}
+                            <span className="btn-icon-wrap">
+                                <img src={cvIcon} alt="" className="btn-icon btn-icon--default" />
+                                <img src={cvGlowIcon} alt="" className="btn-icon btn-icon--glow" />
+                            </span>
+                            <span>{t("home.ctaCv")}</span>
                         </a>
 
                         <HashLink
-                            className="btn-ghost"
+                            className="btn-glass"
                             onMouseMove={handleMagnet}
                             smooth
                             to="/contact#contact"
                         >
-                            {t("home.ctaContact")}
+                            <span className="btn-icon-wrap btn-icon-wrap--contact">
+                                <img src={contactIcon} alt="" className="btn-icon btn-icon--default" />
+                                <img src={contactGlowIcon} alt="" className="btn-icon btn-icon--glow" />
+                            </span>
+                            <span>{t("home.ctaContact")}</span>
                         </HashLink>
                     </div>
 

@@ -82,7 +82,7 @@
 /* ===== NAVIGATION - DESKTOP ===== */
 .main-nav {
     position: relative;
-    padding: 12px 22px;
+    padding: 4px 14px;
     border-radius: var(--nav-radius);
     background: var(--nav-bg);
     border: 1px solid var(--nav-border);

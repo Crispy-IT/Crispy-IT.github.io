@@ -11,12 +11,12 @@
     "greeting": "Hi! My name is",
     "name": "Tomasz Skorupski",
     "lead": "I design, implement, and maintain IT systems and infrastructure that ensure stable and secure business operations. I offer administration, network services, tailored solutions, and ongoing technical support.\nI am currently creating my own business solutions and actively seeking long-term collaboration.",
-    "ctaPortfolio": "🚀 View portfolio",
-    "ctaCv": "📄 Download CV",
-    "ctaContact": "✉️ Contact",
+    "ctaPortfolio": "View portfolio",
+    "ctaCv": "Download CV",
+    "ctaContact": "Contact",
     "stats": {
       "years": { "num": "7+", "label": "years in IT" },
-      "projects": { "num": "5+", "label": "side projects (CMS, PWA)" },
+      "projects": { "num": "5+", "label": "side projects" },
       "english": { "num": "B2", "label": "English" }
     },
     "caption": "The technological foundation of your business",
