@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "./static/css/main.536f3969.css",
-    "main.js": "./static/js/main.940f96f3.js",
+    "main.css": "./static/css/main.8ba245e5.css",
+    "main.js": "./static/js/main.3cd8f3f2.js",
     "static/js/453.16a4f57f.chunk.js": "./static/js/453.16a4f57f.chunk.js",
     "static/media/skills_glow.png": "./static/media/skills_glow.665bbceb930030698a6d.png",
     "static/media/skills.png": "./static/media/skills.1eea458e2e2a6904d2db.png",
     "static/media/home_glow.png": "./static/media/home_glow.929a1e1a63643000a36b.png",
     "static/media/ksef_master_ang.jpg": "./static/media/ksef_master_ang.aa3872ab19aed08e9501.jpg",
-    "static/media/home.png": "./static/media/home.fc58aedd4584e4a4ba59.png",
+    "static/media/home.png": "./static/media/home.7f363526d0834772c776.png",
     "static/media/mobile_cook.jpg": "./static/media/mobile_cook.bb6317e08ac22587dc1c.jpg",
     "static/media/portfolio_glow.png": "./static/media/portfolio_glow.ff395f840b618a2263bd.png",
     "static/media/experience_glow.png": "./static/media/experience_glow.6461a175c9f83da6df0e.png",
@@ -29,12 +29,12 @@
     "static/media/one_page_animals.jpg": "./static/media/one_page_animals.d755806544ebecba9eda.jpg",
     "static/media/smartquote.jpg": "./static/media/smartquote.2f52e82d1f6e956f8182.jpg",
     "index.html": "./index.html",
-    "main.536f3969.css.map": "./static/css/main.536f3969.css.map",
-    "main.940f96f3.js.map": "./static/js/main.940f96f3.js.map",
+    "main.8ba245e5.css.map": "./static/css/main.8ba245e5.css.map",
+    "main.3cd8f3f2.js.map": "./static/js/main.3cd8f3f2.js.map",
     "453.16a4f57f.chunk.js.map": "./static/js/453.16a4f57f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.536f3969.css",
-    "static/js/main.940f96f3.js"
+    "static/css/main.8ba245e5.css",
+    "static/js/main.3cd8f3f2.js"
   ]
 }
