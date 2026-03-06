@@ -1,4 +1,4 @@
-// src/components/CustomCursor/CustomCursor.js
+// src/components/customCursor/customCursor.js
 import React, { useEffect, useRef, useCallback, useState } from 'react';
 import './CustomCursor.css';
 

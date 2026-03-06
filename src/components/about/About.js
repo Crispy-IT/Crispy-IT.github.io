@@ -1,4 +1,4 @@
-// src/components/About/About.js
+// src/components/about/about.js
 import React, { useState, useEffect, useCallback } from "react";
 import { HashLink } from "react-router-hash-link";
 import "./About.css";
@@ -12,7 +12,7 @@ import {
     FaGraduationCap,
 } from "react-icons/fa";
 import { useTranslation, Trans } from "react-i18next";
-import GlowIcon from "../GlowIcon/GlowIcon";
+import GlowIcon from "../glowIcon/GlowIcon";
 import aboutIcon from "../../assets/icons/about/about.png";
 import aboutGlow from "../../assets/icons/about/about_glow.png";
 

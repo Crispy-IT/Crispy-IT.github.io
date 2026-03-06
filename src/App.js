@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Experience from "./components/Experience/Experience";
-import Skills from "./components/Skills/Skills";
-import Portfolio from "./components/Portfolio/Portfolio";
-import Contact from "./components/Contact/Contact";
-import CustomCursor from "./components/CustomCursor";
+import Navbar from "./components/navbar/Navbar";
+import Home from "./components/home/Home";
+import About from "./components/about/About";
+import Experience from "./components/experience/Experience";
+import Skills from "./components/skills/Skills";
+import Portfolio from "./components/portfolio/Portfolio";
+import Contact from "./components/contact/Contact";
+import CustomCursor from "./components/customCursor";
 import CloudBackground from "./background/CloudBackground";
 
 import './App.css';

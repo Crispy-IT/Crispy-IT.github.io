@@ -1,10 +1,9 @@
-// src/components/Navbar/Navbar.js
+// src/components/navbar/navbar.js
 import React, { useRef, useEffect, useCallback, useMemo, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './Navbar.css';
-import LogoHorizontal from '../../assets/logo/logo_horizontaly';
-import GlowIcon from '../GlowIcon/GlowIcon';
+import GlowIcon from '../glowIcon/GlowIcon';
 
 import homeIcon from '../../assets/icons/home/home.png';
 import homeGlow from '../../assets/icons/home/home_glow.png';
@@ -29,9 +28,9 @@ const Navbar = () => {
     const linksContainerRef = useRef(null);
     const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [logoHovered, setLogoHovered] = useState(false);
 
     const navItems = useMemo(() => ([
-        { to: '/', labelKey: 'nav.home', icon: homeIcon, iconGlow: homeGlow },
         { to: '/about', labelKey: 'nav.about', icon: aboutIcon, iconGlow: aboutGlow },
         { to: '/experience', labelKey: 'nav.experience', icon: experienceIcon, iconGlow: experienceGlow },
         { to: '/skills', labelKey: 'nav.skills', icon: skillsIcon, iconGlow: skillsGlow },
@@ -84,7 +83,6 @@ const Navbar = () => {
         setIsMenuOpen(false);
     };
 
-    // Zamknij menu po zmianie strony
     useEffect(() => {
         closeMenu();
     }, [location.pathname]);
@@ -99,7 +97,6 @@ const Navbar = () => {
         return () => window.removeEventListener('resize', onResize);
     }, [setPillToActive]);
 
-    // Zablokuj scroll gdy menu jest otwarte
     useEffect(() => {
         if (isMenuOpen) {
             document.body.style.overflow = 'hidden';
@@ -115,8 +112,24 @@ const Navbar = () => {
         <>
             <header className="main-header">
                 <div className="header-logo">
-                    <NavLink to="/" className="logo-link" aria-label={t('logo.ariaLabel')}>
-                        <LogoHorizontal />
+                    <NavLink
+                        to="/"
+                        className="logo-link"
+                        aria-label={t('logo.ariaLabel')}
+                        onMouseEnter={() => setLogoHovered(true)}
+                        onMouseLeave={() => setLogoHovered(false)}
+                    >
+                        <GlowIcon
+                            src={homeIcon}
+                            srcGlow={homeGlow}
+                            alt="Home"
+                            size={64}
+                            className={`logo-glow-icon ${logoHovered ? 'hovered' : ''}`}
+                        />
+                        <span className={`logo-text ${logoHovered ? 'hovered' : ''}`}>
+                            <span className="logo-text-shell">Shell</span>
+                            <span className="logo-text-ty">ty</span>
+                        </span>
                     </NavLink>
                 </div>
 
@@ -181,7 +194,6 @@ const Navbar = () => {
                 </div>
             </header>
 
-            {/* Overlay do zamykania menu */}
             <div
                 className={`menu-overlay ${isMenuOpen ? 'open' : ''}`}
                 onClick={closeMenu}

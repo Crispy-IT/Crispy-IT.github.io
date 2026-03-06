@@ -1,4 +1,4 @@
-// src/components/Experience/Experience.js
+// src/components/experience/experience.js
 import React from "react";
 import "./Experience.css";
 import {
@@ -13,7 +13,7 @@ import {
     FaCogs,
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import GlowIcon from "../GlowIcon/GlowIcon";
+import GlowIcon from "../glowIcon/GlowIcon";
 import experienceIcon from "../../assets/icons/experience/experience2.png";
 import experienceGlow from "../../assets/icons/experience/experience_glow.png";
 

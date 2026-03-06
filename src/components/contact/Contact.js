@@ -1,8 +1,8 @@
-// src/components/Contact/Contact.js
+// src/components/contact/contact.js
 import React, { useState, useRef } from "react";
 import "./Contact.css";
 import { useTranslation } from "react-i18next";
-import GlowIcon from "../GlowIcon/GlowIcon";
+import GlowIcon from "../glowIcon/GlowIcon";
 import contactIcon from "../../assets/icons/contact/contact.png";
 import contactGlow from "../../assets/icons/contact/contact_glow.png";
 

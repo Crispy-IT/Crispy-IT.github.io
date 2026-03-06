@@ -1,4 +1,4 @@
-/* src/components/Navbar/Navbar.css */
+/* src/components/navbar/navbar.css */
 
 :root {
     --header-offset: 16px;
@@ -25,7 +25,6 @@
     --transition-base: 250ms ease;
 }
 
-/* ===== HEADER LAYOUT ===== */
 .main-header {
     position: fixed;
     top: 16px;
@@ -39,47 +38,79 @@
     z-index: 1000;
 }
 
-/* ===== LOGO ===== */
 .header-logo {
     flex-shrink: 0;
     position: relative;
     align-self: flex-start;
 }
 
-.header-logo a {
+.header-logo .logo-link {
     display: flex;
     align-items: center;
+    gap: 10px;
     text-decoration: none;
     transition: transform var(--transition-base);
     margin-top: 8px;
 }
 
-.header-logo a:hover,
-.header-logo a:focus-visible {
+.header-logo .logo-link:hover,
+.header-logo .logo-link:focus-visible {
     transform: scale(1.03);
 }
 
-.header-logo .logo-container {
-    height: var(--logo-height);
-    width: auto;
-    display: block;
-    cursor: pointer;
+.logo-glow-icon {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
 }
 
-.header-logo .logo-container svg {
-    height: 100%;
-    width: auto;
-    display: block;
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3)) brightness(1.05);
+.logo-glow-icon .glow-icon-base {
+    opacity: 1;
+    transition: opacity var(--transition-base);
+}
+
+.logo-glow-icon .glow-icon-lit {
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.logo-glow-icon.hovered .glow-icon-base {
+    opacity: 0;
+}
+
+.logo-glow-icon.hovered .glow-icon-lit {
+    opacity: 1;
+}
+
+.logo-text {
+    display: flex;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    font-weight: 700;
+    letter-spacing: 0.3px;
     transition: filter var(--transition-base);
-    overflow: visible;
 }
 
-.header-logo a:hover .logo-container svg {
-    filter: drop-shadow(0 4px 20px rgba(12, 192, 255, 0.25)) brightness(1.08);
+.logo-text-shell {
+    color: #ffffff;
 }
 
-/* ===== NAVIGATION - DESKTOP ===== */
+.logo-text-ty {
+    color: var(--color-sky);
+}
+
+.logo-text.hovered {
+    filter: drop-shadow(0 0 8px rgba(12, 192, 255, 0.6));
+}
+
+.logo-text.hovered .logo-text-shell {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.logo-text.hovered .logo-text-ty {
+    text-shadow: 0 0 15px rgba(12, 192, 255, 0.8);
+}
+
 .main-nav {
     position: relative;
     padding: 4px 14px;
@@ -167,7 +198,6 @@
     opacity: 1;
 }
 
-/* ===== HEADER RIGHT (lang + hamburger) ===== */
 .header-right {
     display: flex;
     align-items: center;
@@ -175,7 +205,6 @@
     flex-shrink: 0;
 }
 
-/* ===== LANGUAGE SWITCHER ===== */
 .header-lang-switcher {
     position: relative;
     display: grid;
@@ -232,12 +261,10 @@
     color: var(--color-text-secondary);
 }
 
-/* ===== HAMBURGER - UKRYTY NA DESKTOP ===== */
 .hamburger {
     display: none;
 }
 
-/* ===== OVERLAY ===== */
 .menu-overlay {
     display: none;
 }
@@ -246,9 +273,6 @@ body {
     padding-top: 0;
 }
 
-/* =========================================
-   MOBILE STYLES
-   ========================================= */
 @media (max-width: 768px) {
     :root {
         --logo-height: clamp(32px, 8vw, 44px);
@@ -264,11 +288,19 @@ body {
         gap: 10px;
     }
 
-    .header-logo a {
+    .header-logo .logo-link {
         margin-top: 4px;
     }
 
-    /* ===== HAMBURGER BUTTON ===== */
+    .logo-glow-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .logo-text {
+        font-size: clamp(1.1rem, 4vw, 1.4rem);
+    }
+
     .hamburger {
         display: flex;
         flex-direction: column;
@@ -301,7 +333,6 @@ body {
         transform-origin: center;
     }
 
-    /* Animacja hamburger -> X */
     .hamburger.open span:nth-child(1) {
         transform: translateY(7px) rotate(45deg);
     }
@@ -315,14 +346,12 @@ body {
         transform: translateY(-7px) rotate(-45deg);
     }
 
-    /* ===== MOBILE NAVIGATION ===== */
     .main-nav {
         position: fixed;
         top: 0;
         right: 0;
         width: min(320px, 85vw);
         height: 100vh;
-        height: 100dvh;
         padding: 80px 20px 30px;
         border-radius: 0;
         border: none;
@@ -389,7 +418,6 @@ body {
         height: 32px;
     }
 
-    /* ===== OVERLAY ===== */
     .menu-overlay {
         display: block;
         position: fixed;
@@ -411,7 +439,6 @@ body {
         visibility: visible;
     }
 
-    /* ===== LANGUAGE SWITCHER MOBILE ===== */
     .header-lang-switcher {
         padding: 2px;
     }
@@ -422,7 +449,6 @@ body {
     }
 }
 
-/* ===== GLOBAL ===== */
 html, body {
     overflow-x: hidden;
 }

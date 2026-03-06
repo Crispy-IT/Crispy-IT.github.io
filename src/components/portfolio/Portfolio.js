@@ -1,4 +1,4 @@
-// src/components/Portfolio/Portfolio.js
+// src/components/portfolio/portfolio.js
 import React, { useMemo, useState, useEffect, useCallback } from 'react';
 import './Portfolio.css';
 import { FaGithub, FaExternalLinkAlt, FaKey, FaCopy, FaCheck } from 'react-icons/fa';
@@ -14,7 +14,7 @@ import postlioThumbnailAng from '../../assets/thumbnails/postlio_ang.jpg';
 import cookbookThumbnail from '../../assets/thumbnails/mobile_cook.jpg';
 import animalsThumbnail from '../../assets/thumbnails/one_page_animals.jpg';
 import shelltyBlogThumbnail from '../../assets/thumbnails/shellty_blog.jpg';
-import GlowIcon from '../GlowIcon/GlowIcon';
+import GlowIcon from '../glowIcon/GlowIcon';
 import portfolioIcon from '../../assets/icons/portfolio/portfolio.png';
 import portfolioGlow from '../../assets/icons/portfolio/portfolio_glow.png';
 

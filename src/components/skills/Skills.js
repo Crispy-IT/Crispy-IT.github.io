@@ -1,4 +1,4 @@
-// src/components/Skills/Skills.js
+// src/components/skills/skills.js
 import React, { useMemo, useState } from "react";
 import "./Skills.css";
 import {
@@ -41,7 +41,7 @@ import {
 import { TbBrandAzure, TbApi } from "react-icons/tb";
 import { FaMobileAlt } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import GlowIcon from "../GlowIcon/GlowIcon";
+import GlowIcon from "../glowIcon/GlowIcon";
 import skillsIcon from "../../assets/icons/skills/skills.png";
 import skillsGlow from "../../assets/icons/skills/skills_glow.png";
 

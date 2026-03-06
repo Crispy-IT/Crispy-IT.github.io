@@ -1,4 +1,4 @@
-// src/components/GlowIcon.js
+// src/components/glowIcon.js
 import React from 'react';
 import './GlowIcon.css';
 
