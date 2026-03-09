@@ -71,7 +71,7 @@ const Skills = () => {
             label: t("skills.groups.network"),
             items: [
                 { name: t("skills.items.netProtocols.name"), level: t("skills.items.netProtocols.level"), Icon: FaNetworkWired },
-                { name: t("skills.items.netDevices.name"), level: t("skills.items.netDevices.level"), Icon: FaNetworkWired }
+                { id: "netDevices", name: t("skills.items.netDevices.name", { returnObjects: true }), level: t("skills.items.netDevices.level"), Icon: FaNetworkWired }
             ]
         },
         {
@@ -156,7 +156,17 @@ const Skills = () => {
                         {Twin && <Twin className="sk-icon sk-icon--twin" />}
                         {suffixIcons && suffixIcons.map((S, i) => <S key={i} className="sk-icon sk-icon--mini" />)}
                     </div>
-                    <div className="sk-title">{name}</div>
+                    <div className="sk-title">
+                        {Array.isArray(name) ? (
+                            <div className="sk-names sk-names--column">
+                                {name.map((n, i) => (
+                                    <span key={i} className="sk-name-text">{n}</span>
+                                ))}
+                            </div>
+                        ) : (
+                            name
+                        )}
+                    </div>
                     <div className={`sk-level sk-level--${level}`}>{level}</div>
                 </div>
 
@@ -226,7 +236,10 @@ const Skills = () => {
                         <h3 className="sk-group__title">{group.label}</h3>
                         <div className="sk-grid">
                             {group.items.map((s) => (
-                                <SkillItem key={`${group.key}:${s.id ?? s.name ?? (s.Icon?.name || 'item')}`} {...s} />
+                                <SkillItem 
+                                    key={`${group.key}:${s.id ?? (Array.isArray(s.name) ? s.name.join('-') : s.name) ?? (s.Icon?.name || 'item')}`} 
+                                    {...s} 
+                                />
                             ))}
                         </div>
                     </section>

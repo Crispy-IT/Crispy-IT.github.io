@@ -198,6 +198,49 @@
     font-weight: 600;
     color: #f1f5f9;
     font-size: 0.95rem;
+    flex: 1;
+}
+
+.sk-names {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+}
+
+.sk-names--column {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.sk-name-chip {
+    display: inline-flex;
+    padding: 3px 10px;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    font-size: 0.82rem;
+    color: #cbd5e1;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.sk-name-text {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    line-height: 1.3;
+}
+
+.sk-item:hover .sk-name-chip {
+    border-color: rgba(12, 192, 255, 0.25);
+    background-color: rgba(12, 192, 255, 0.03);
+    color: #f1f5f9;
+    box-shadow: 0 0 10px rgba(12, 192, 255, 0.15);
+}
+
+.sk-item:hover .sk-name-text {
+    color: #f1f5f9;
 }
 
 .sk-level {
